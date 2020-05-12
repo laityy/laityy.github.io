@@ -741,7 +741,7 @@
     let gitalk = new Gitalk({
         clientID: '888bcf169b8ac6a8dd5d',
         clientSecret: '6d49ea1473d0499f1a02adda4a68be0be1dd95f7',
-        repo: 'laity-talks',
+        repo: 'https://github.com/laityy/gitalk',
         owner: 'laityy',
         admin: "laityy",
         id: '2020-05-11T23-31-54',
@@ -973,6 +973,30 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
 </main>
 
+
+{% elseif theme.gitalk.enable %}
+    <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '888bcf169b8ac6a8dd5d',
+        clientSecret: '6d49ea1473d0499f1a02adda4a68be0be1dd95f7',
+        repo: 'https://github.com/laityy/gitalk',
+        owner: 'laityy',
+        admin: "laityy",
+        id: '2020-05-11T23-31-54',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+{% endif %}
 
 
 
