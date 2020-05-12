@@ -250,16 +250,16 @@ mark {
 }
 
 .bg-color {
-    background-image: linear-gradient(to right, #4cbf30 0%, #46d1c6 100%);
+    background-image: linear-gradient(to right, #80d0df 0%, #44dbcf 100%);
     opacity: 0.8;
 }
 
 .text-color {
-    color: #c4cc58 !important;
+    color: #ccc458 !important;
 }
 
 .white-color {
-    color: #fff;
+    color: rgb(255, 255, 255);
 }
 
 .progress-bar {
