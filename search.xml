@@ -4,17 +4,17 @@
   
     
     <entry>
-      <title>network</title>
-      <link href="/2020/05/12/network/"/>
-      <url>/2020/05/12/network/</url>
+      <title>传输层TCP/UDP协议</title>
+      <link href="/2020/05/13/tcp-udp/"/>
+      <url>/2020/05/13/tcp-udp/</url>
       
-        <content type="html"><![CDATA[<script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+        <content type="html"><![CDATA[<h2 id="传输层协议UDP-TCP"><a href="#传输层协议UDP-TCP" class="headerlink" title="传输层协议UDP/TCP"></a>传输层协议UDP/TCP</h2><h3 id="UDP协议"><a href="#UDP协议" class="headerlink" title="UDP协议"></a>UDP协议</h3><h4 id="特点"><a href="#特点" class="headerlink" title="特点:"></a>特点:</h4><ul><li>无连接，尽最大努力交付</li><li>不保证可靠交付，面向报文（对应用层报文长度不做修改，全部发送给网络层，即一次发送一个完整的报文，就可能需要网络层需要分片，适合一次传输少量数据）</li><li>没有拥塞控制（允许丢弃部分数据）即保证实时性</li><li>首部长度较小即8B</li><li>支持一对一、一对多、多对一和多对多的交互通信</li></ul><h4 id="首部格式："><a href="#首部格式：" class="headerlink" title="首部格式："></a>首部格式：</h4><table><thead><tr><th>16位端口号（可以没有）</th><th>16位目的端口号</th></tr></thead><tbody><tr><td>16位UDP长度（UDP数据报总长度）</td><td>16 位UDP校验和</td></tr></tbody></table><ul><li>均为2B 共4B</li><li>若有数据部分则加在首部格式后，且大小为4B整数倍</li></ul><h4 id="UDP校验"><a href="#UDP校验" class="headerlink" title="UDP校验:"></a>UDP校验:</h4><ul><li><p>在计算校验和时出现伪首部（伪IP首部），不参与数据传输过程</p></li><li><p>过程用二进制反码运算求和验证</p></li></ul><h3 id="TCP协议"><a href="#TCP协议" class="headerlink" title="TCP协议"></a>TCP协议</h3><h4 id="特点："><a href="#特点：" class="headerlink" title="特点："></a>特点：</h4><ul><li>面向连接（虚连接非物理连接）</li><li>点对点传输</li><li>可靠交付，有序传输</li><li>全双工通信</li><li>面向字节流<ul><li>发送缓存：准备发送的数据&amp;已发送但未收到确认的数据</li><li>接收缓存：按序到达但尚未被接受应用程序读取的数据&amp;不按序到达的数据</li><li>流： 流入到进程或从进程流出的字节序列</li></ul></li></ul><h4 id="报文段格式"><a href="#报文段格式" class="headerlink" title="报文段格式"></a>报文段格式</h4><h4 id="可靠传输"><a href="#可靠传输" class="headerlink" title="可靠传输"></a>可靠传输</h4><h4 id="连接管理"><a href="#连接管理" class="headerlink" title="连接管理"></a>连接管理</h4><ul><li>三次握手<ul><li>1</li><li>2</li><li>3</li></ul></li><li>四次挥手<ul><li>1</li><li>2</li><li>3</li><li>4</li></ul></li></ul><h4 id="流量控制"><a href="#流量控制" class="headerlink" title="流量控制"></a>流量控制</h4><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
       
       
       
         <tags>
             
-            <tag> CS </tag>
+            <tag> 计算机网络 </tag>
             
         </tags>
       
