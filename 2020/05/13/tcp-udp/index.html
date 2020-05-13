@@ -464,14 +464,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    437
+                    920
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 
@@ -506,7 +506,7 @@
 </tr>
 </tbody></table>
 <ul>
-<li>均为2B 共4B</li>
+<li>均为2B 共8B</li>
 <li>若有数据部分则加在首部格式后，且大小为4B整数倍</li>
 </ul>
 <h4 id="UDP校验"><a href="#UDP校验" class="headerlink" title="UDP校验:"></a>UDP校验:</h4><ul>
@@ -528,17 +528,46 @@
 </li>
 </ul>
 <h4 id="报文段格式"><a href="#报文段格式" class="headerlink" title="报文段格式"></a>报文段格式</h4><h4 id="可靠传输"><a href="#可靠传输" class="headerlink" title="可靠传输"></a>可靠传输</h4><h4 id="连接管理"><a href="#连接管理" class="headerlink" title="连接管理"></a>连接管理</h4><ul>
-<li>三次握手<ul>
-<li>1</li>
-<li>2</li>
-<li>3</li>
+<li><p>连接传输三个阶段：<br>连接建立（三次握手）—数据传送—连接释放（四次挥手）（虚连接）</p>
+</li>
+<li><p>三次握手</p>
+<ul>
+<li><p>1：客户端发送连接请求报文段，无应用层数据； </p>
+<ul>
+<li>报文段中重要字段：SYN（同步位）=1，seq（序号–每次发送报文段都会有）=x（随机）</li>
 </ul>
 </li>
-<li>四次挥手<ul>
-<li>1</li>
-<li>2</li>
-<li>3</li>
-<li>4</li>
+<li><p>2：服务器端为该TCP连接分配资源即”缓存和变量”，并向客户端发送确认报文段，允许连接，无应用层数据； </p>
+<ul>
+<li>SYN=1，ACK（确认位）=1，seq=y（随机），ack（确认号；与ACK同步使用）=x+1</li>
+</ul>
+</li>
+<li><p>3：客户端位该TCP连接分配缓存和变量，并向服务器返回确认的确认，可以携带数据； </p>
+<ul>
+<li>SYN=0（只在发送连接请求和发送确认连接请求为1）ACK=1，seq=x+1，ack=y+1</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>四次挥手；</p>
+<ul>
+<li>1：客户端发送连接释放报文段，停止发送数据，主动关闭TCP连接；<ul>
+<li>报文段重要字段：FIN（结束位–请求释放连接时会有）=1，seq=u</li>
+</ul>
+</li>
+<li>2：服务器端回送一个确认报文段，客户到服务器这个方向的连接就释放了—半关闭状态；<ul>
+<li>ACK=1，seq=v，ack=u+1</li>
+</ul>
+</li>
+<li>3：客户端收到2过程服务器报文段不会给予回复，待服务器发送完数据后，就发出连接释放报文段，主动关闭TCP连接；<ul>
+<li>FIN=1，ACK=1，seq=w，ack=u+1  </li>
+</ul>
+</li>
+<li>4客户端回送一个确认报文段，再等待时间等待计时器设置的2MSL（最长报文段寿命），连接彻底关闭；<ul>
+<li>2MSL：确认客户端发送的确认报文段是否被服务器端接受，若超出2MSl则重传。假若不等待该时间，则会导致客户发送完报文段后立即关闭连接，若报文段丢失，则服务器一直发送连接释放报文段。该连接就无法关闭。</li>
+<li>ACK=1，seq=u+1，ack=w+1</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -1055,7 +1084,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <span id="sitetime"></span><br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">614</span>&nbsp;字
+                class="white-color">1.1k</span>&nbsp;字
             
             
             
