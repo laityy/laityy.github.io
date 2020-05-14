@@ -4,12 +4,37 @@
   
     
     <entry>
+      <title>实用工具</title>
+      <link href="/2020/05/14/shi-yong-gong-ju-lei-wang-zhan/"/>
+      <url>/2020/05/14/shi-yong-gong-ju-lei-wang-zhan/</url>
+      
+        <content type="html"><![CDATA[<h2 id="主要介绍一些学习中可能使用的实用工具"><a href="#主要介绍一些学习中可能使用的实用工具" class="headerlink" title="主要介绍一些学习中可能使用的实用工具"></a>主要介绍一些学习中可能使用的实用工具</h2><h3 id="文档转换"><a href="#文档转换" class="headerlink" title="文档转换"></a>文档转换</h3><ol><li><a href="https://smallpdf.com/cn" target="_blank" rel="noopener">轻松玩转pdf</a></li></ol><p>pdf文档的转换和编辑加密等</p><ol start="2"><li><a href="https://www.cleverpdf.com/cn" target="_blank" rel="noopener">CleverPDF</a></li></ol><p>27个强大的PDF在线工具，完全免费！</p><ol start="3"><li><p><a href="https://www.processon.com/" target="_blank" rel="noopener">ProcessOn</a></p><p>免费支持在线作图，实时协作。支持流程图，思维导图，原型图，UML，网络拓扑图，组织结构图等</p></li><li><p><a href="http://www.alltoall.net/" target="_blank" rel="noopener">ALL TO ALL</a></p></li></ol><p>国内最全类型的在线文件转换平台，免费，快速</p><ol start="5"><li><p><a href="https://cn.office-converter.com/" target="_blank" rel="noopener">Office-conver</a><br>支持各种文件类型的转换，如视频，音频，图片，电子书等多种文件格式</p></li><li><p><a href="https://www.wdku.net/" target="_blank" rel="noopener">SuperTools</a></p></li></ol><p>同样提供一些文档格式的转换，支持在线文字识别转换</p><ol start="7"><li><a href="https://lightpdf.com/zh/" target="_blank" rel="noopener">LightPDF</a></li></ol><p>简单快捷，一键解决pdf所以pdf编辑问题</p><h3 id="图片素材类"><a href="#图片素材类" class="headerlink" title="图片素材类"></a>图片素材类</h3><ol><li><a href="https://wallhaven.cc/" target="_blank" rel="noopener">wallhaven</a></li></ol><p>适合选取图片做壁纸的网站，全是超高分辨率图片</p><ol start="2"><li><a href="https://pixabay.com/" target="_blank" rel="noopener">pixabay</a></li></ol><p>素材类网站，包括各种视频素材，插画，矢量图等</p><ol start="3"><li><a href="https://unsplash.com/" target="_blank" rel="noopener">unsplash</a></li></ol><p>网站里面提供摄影图片素材，不管你是做网页还是做PPT都可以使用，并且每一个图片素材分辨率都非常高，保管够用！</p><p>4.<a href="http://www.designerspics.com/" target="_blank" rel="noopener">DesignersPics.com</a></p><p>提供个人和商业使用的免费高清图片，不需要归属</p><ol start="5"><li><a href="https://gratisography.com/" target="_blank" rel="noopener">Gratisography</a></li></ol><p>同样是高清免费图片素材网站，图片版权完全自由</p><h3 id="图片编辑类"><a href="#图片编辑类" class="headerlink" title="图片编辑类"></a>图片编辑类</h3><ol><li><a href="https://tinypng.com/" target="_blank" rel="noopener">TinyPng</a></li></ol><p>用于图片压缩，图片最大不超过5M，图片数量不超过20张</p><ol start="2"><li><a href="https://www.iloveimg.com/zh-cn" target="_blank" rel="noopener">iloveimg</a></li></ol><p>可以进行图片的压缩，尺寸调整，裁剪，图片生成器等</p><ol start="3"><li><a href="http://www.uugai.com/" target="_blank" rel="noopener">U钙网</a></li></ol><p>完全免费的LOGO在线设计制作工具</p><ol start="4"><li><a href="http://waifu2x.udp.jp/" target="_blank" rel="noopener">waifu2x</a></li></ol><p>支持多种语言显示，使用卷积神经网络对动漫风格的图片进行放大操作（支持照片）</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 工具 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>传输层TCP/UDP协议</title>
       <link href="/2020/05/13/tcp-udp/"/>
       <url>/2020/05/13/tcp-udp/</url>
       
         <content type="html"><![CDATA[<h2 id="传输层协议UDP-TCP"><a href="#传输层协议UDP-TCP" class="headerlink" title="传输层协议UDP/TCP"></a>传输层协议UDP/TCP</h2><h3 id="UDP协议"><a href="#UDP协议" class="headerlink" title="UDP协议"></a>UDP协议</h3><h4 id="特点"><a href="#特点" class="headerlink" title="特点:"></a>特点:</h4><ul><li>无连接，尽最大努力交付</li><li>不保证可靠交付，面向报文（对应用层报文长度不做修改，全部发送给网络层，即一次发送一个完整的报文，就可能需要网络层需要分片，适合一次传输少量数据）</li><li>没有拥塞控制（允许丢弃部分数据）即保证实时性</li><li>首部长度较小即8B</li><li>支持一对一、一对多、多对一和多对多的交互通信</li></ul><h4 id="首部格式："><a href="#首部格式：" class="headerlink" title="首部格式："></a>首部格式：</h4><table><thead><tr><th>16位端口号（可以没有）</th><th>16位目的端口号</th></tr></thead><tbody><tr><td>16位UDP长度（UDP数据报总长度）</td><td>16 位UDP校验和</td></tr></tbody></table><ul><li>均为2B 共8B</li><li>若有数据部分则加在首部格式后，且大小为4B整数倍</li></ul><h4 id="UDP校验"><a href="#UDP校验" class="headerlink" title="UDP校验:"></a>UDP校验:</h4><ul><li><p>在计算校验和时出现伪首部（伪IP首部），不参与数据传输过程</p></li><li><p>过程用二进制反码运算求和验证</p></li></ul><h3 id="TCP协议"><a href="#TCP协议" class="headerlink" title="TCP协议"></a>TCP协议</h3><h4 id="特点："><a href="#特点：" class="headerlink" title="特点："></a>特点：</h4><ul><li>面向连接（虚连接非物理连接）</li><li>点对点传输</li><li>可靠交付，有序传输</li><li>全双工通信</li><li>面向字节流<ul><li>发送缓存：准备发送的数据&amp;已发送但未收到确认的数据</li><li>接收缓存：按序到达但尚未被接受应用程序读取的数据&amp;不按序到达的数据</li><li>流： 流入到进程或从进程流出的字节序列</li></ul></li></ul><h4 id="报文段格式"><a href="#报文段格式" class="headerlink" title="报文段格式"></a>报文段格式</h4><h4 id="可靠传输"><a href="#可靠传输" class="headerlink" title="可靠传输"></a>可靠传输</h4><h4 id="连接管理"><a href="#连接管理" class="headerlink" title="连接管理"></a>连接管理</h4><ul><li><p>连接传输三个阶段：<br>连接建立（三次握手）—数据传送—连接释放（四次挥手）（虚连接）</p></li><li><p>三次握手</p><ul><li><p>1：客户端发送连接请求报文段，无应用层数据； </p><ul><li>报文段中重要字段：SYN（同步位）=1，seq（序号–每次发送报文段都会有）=x（随机）</li></ul></li><li><p>2：服务器端为该TCP连接分配资源即”缓存和变量”，并向客户端发送确认报文段，允许连接，无应用层数据； </p><ul><li>SYN=1，ACK（确认位）=1，seq=y（随机），ack（确认号；与ACK同步使用）=x+1</li></ul></li><li><p>3：客户端位该TCP连接分配缓存和变量，并向服务器返回确认的确认，可以携带数据； </p><ul><li>SYN=0（只在发送连接请求和发送确认连接请求为1）ACK=1，seq=x+1，ack=y+1</li></ul></li></ul></li><li><p>四次挥手；</p><ul><li>1：客户端发送连接释放报文段，停止发送数据，主动关闭TCP连接；<ul><li>报文段重要字段：FIN（结束位–请求释放连接时会有）=1，seq=u</li></ul></li><li>2：服务器端回送一个确认报文段，客户到服务器这个方向的连接就释放了—半关闭状态；<ul><li>ACK=1，seq=v，ack=u+1</li></ul></li><li>3：客户端收到2过程服务器报文段不会给予回复，待服务器发送完数据后，就发出连接释放报文段，主动关闭TCP连接；<ul><li>FIN=1，ACK=1，seq=w，ack=u+1  </li></ul></li><li>4：客户端回送一个确认报文段，再等待时间等待计时器设置的2MSL（最长报文段寿命），连接彻底关闭；<ul><li>2MSL：确认客户端发送的确认报文段是否被服务器端接受，若超出2MSl则重传。假若不等待该时间，则会导致客户发送完报文段后立即关闭连接，若报文段丢失，则服务器一直发送连接释放报文段。该连接就无法关闭。</li><li>ACK=1，seq=u+1，ack=w+1</li></ul></li></ul></li></ul><h4 id="流量控制"><a href="#流量控制" class="headerlink" title="流量控制"></a>流量控制</h4><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
       
+      
+      <categories>
+          
+          <category> 计算机网络 </category>
+          
+      </categories>
       
       
         <tags>
