@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://laityy.github.io/"/>
-  <updated>2020-05-15T06:10:44.122Z</updated>
+  <updated>2020-05-15T06:22:46.064Z</updated>
   <id>http://laityy.github.io/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>实用工具</title>
-    <link href="http://laityy.github.io/2020/05/14/shi-yong-gong-ju-lei-wang-zhan/"/>
-    <id>http://laityy.github.io/2020/05/14/shi-yong-gong-ju-lei-wang-zhan/</id>
+    <link href="http://laityy.github.io/posts/64490.html"/>
+    <id>http://laityy.github.io/posts/64490.html</id>
     <published>2020-05-14T02:45:18.259Z</published>
-    <updated>2020-05-15T06:10:44.122Z</updated>
+    <updated>2020-05-15T06:22:46.064Z</updated>
     
     <summary type="html">
     
@@ -43,8 +43,8 @@
   
   <entry>
     <title>传输层TCP/UDP协议</title>
-    <link href="http://laityy.github.io/2020/05/13/tcp-udp/"/>
-    <id>http://laityy.github.io/2020/05/13/tcp-udp/</id>
+    <link href="http://laityy.github.io/posts/34721.html"/>
+    <id>http://laityy.github.io/posts/34721.html</id>
     <published>2020-05-13T06:51:34.000Z</published>
     <updated>2020-05-14T06:10:02.402Z</updated>
     
@@ -70,8 +70,8 @@
   
   <entry>
     <title>搭建博客历程</title>
-    <link href="http://laityy.github.io/2020/05/12/da-jian-bo-ke-li-cheng/"/>
-    <id>http://laityy.github.io/2020/05/12/da-jian-bo-ke-li-cheng/</id>
+    <link href="http://laityy.github.io/posts/60707.html"/>
+    <id>http://laityy.github.io/posts/60707.html</id>
     <published>2020-05-12T06:34:03.000Z</published>
     <updated>2020-05-12T07:22:22.309Z</updated>
     
@@ -97,8 +97,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://laityy.github.io/2020/05/11/hello-world/"/>
-    <id>http://laityy.github.io/2020/05/11/hello-world/</id>
+    <link href="http://laityy.github.io/posts/16107.html"/>
+    <id>http://laityy.github.io/posts/16107.html</id>
     <published>2020-05-11T15:31:54.630Z</published>
     <updated>2020-05-13T06:16:57.997Z</updated>
     
