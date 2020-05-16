@@ -363,7 +363,7 @@ header .side-nav .menu-list a {
 header .side-nav .fa-fw {
     width: 3.3rem;
     text-align: left;
-    margin-right: 5px;
+    margin-right: 1px;
 }
 
 header .side-nav .social-link {
