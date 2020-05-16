@@ -541,23 +541,13 @@
 </ul>
 <h4 id="2-报文段格式"><a href="#2-报文段格式" class="headerlink" title="2. 报文段格式"></a>2. 报文段格式</h4><p>  <img src="./medias/loading.gif" data-original="D:%5Cblog%5Csource_posts%5Cpicture" alt="TCP首部"></p>
 <ul>
-<li>首部格式<ul>
-<li><ol>
+<li>首部格式</li>
+</ul>
+<ol>
 <li>序号：在TCP连接中传输的字节流的每一个字节都按顺序编号，本字段表示本报文段所发送数据的<strong>第一个字节的序号</strong>。</li>
-</ol>
-</li>
-<li><ol start="2">
 <li>确认号：<strong>期望收到对方</strong>下一个报文段的第一个数据字节的序号；若确认号为N，则证明到序号N-1为止的所有数据都已正确收到。</li>
-</ol>
-</li>
-<li><ol start="3">
 <li>数据偏移（<strong>首部长度</strong>）4bit：TCP报文段的数据起始处距离TCP报文段的起始处有多远，单位4B。<br><img src="./medias/loading.gif" data-original="./source/picture/TCP2.png" alt="控制位"></li>
-</ol>
-</li>
-<li><ol start="4">
-<li>6个控制位：</li>
-</ol>
-<ul>
+<li>6个控制位：<ul>
 <li><strong>紧急位URG</strong>（优先发送）：URG=1，表明此报文段中有紧急数据，是最高优先级的数据，应尽快传送，不用在缓存里排队，配合紧急指针字段使用。</li>
 <li>确认位ACK：ACK=1时有效,在连接建立后，所有传输的报文段都必须把ACK置为1。</li>
 <li><strong>推送位PSH</strong>（优先接收）：PSH=1时，接受方尽快交付接受应用进程，不再等到缓存填满再向上交付。和紧急位作用类似，不过PSH在接收方。</li>
@@ -566,29 +556,12 @@
 <li><strong>终止位FIN</strong>：FIN=1，表明此报文段发送方数据已发完，要求释放链接；<strong>挥手中用到</strong> 。</li>
 </ul>
 </li>
-<li><ol start="5">
 <li>窗口：指发送本报文段的一方的接受窗口，即现在允许发送方能发送的数据最大量（0–65535）。 </li>
-</ol>
-</li>
-<li><ol start="6">
 <li>检验和：和UDP类似，检验首部+数据，检验时要加上12B的伪首部，第四个字段（协议字段）为6.</li>
-</ol>
-</li>
-<li><ol start="7">
 <li>紧急指针：URG=1时有效，指出本报文段中紧急数据的字节数。</li>
-</ol>
-</li>
-<li><ol start="8">
 <li>选项：最大报文长度MSS，窗口扩大</li>
-</ol>
-</li>
-<li><ol start="9">
 <li>填充：需要将报文段填充为4B的整数倍。     <h4 id="3-可靠传输"><a href="#3-可靠传输" class="headerlink" title="3. 可靠传输"></a>3. 可靠传输</h4></li>
 </ol>
-</li>
-</ul>
-</li>
-</ul>
 <h4 id="4-连接管理"><a href="#4-连接管理" class="headerlink" title="4. 连接管理"></a>4. 连接管理</h4><ul>
 <li><p>连接传输三个阶段：<br> 连接建立（<strong>三次握手</strong>）—数据传送—连接释放（<strong>四次挥手</strong>）（虚连接）</p>
 </li>
