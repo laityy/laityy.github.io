@@ -17,17 +17,17 @@
 
 
     <title>传输层TCP/UDP协议 | ~Wangs</title>
-    <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/laityy/laityy.github.io/favicon.png">
+    <link rel="icon" type="image/png" href="/favicon.png">
 
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/laityy/laityy.github.io/libs/awesome/css/all.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/laityy/laityy.github.io/libs/materialize/materialize.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/laityy/laityy.github.io/libs/aos/aos.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/laityy/laityy.github.io/libs/animate/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/laityy/laityy.github.io/libs/lightGallery/css/lightgallery.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/laityy/laityy.github.io/css/matery.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/laityy/laityy.github.io/css/my.css">
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
 
-    <script src="https://cdn.jsdelivr.net/gh/laityy/laityy.github.io/libs/jquery/jquery.min.js"></script>
+    <script src="/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="~Wangs" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
@@ -171,7 +171,7 @@
 
     <div class="mobile-head bg-color">
         
-        <img src="./medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/laityy/laityy.github.io/medias/logo.png" class="logo-img circle responsive-img">
+        <img src="./medias/loading.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">~Wangs</div>
         <div class="logo-desc">
@@ -311,7 +311,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/laityy/laityy.github.io/medias/featureimages/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -329,7 +329,7 @@
 <main class="post-container content">
 
     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/laityy/laityy.github.io/libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
 <style>
     #articleContent h1::before,
     #articleContent h2::before,
@@ -475,7 +475,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.1k
+                    2.2k
                 </div>
                 
 
@@ -565,14 +565,14 @@
 <li>校验：与UDP校验一样，在发送方和接受方都添加伪首部，通过二进制反码求和来判断。</li>
 <li>序号：由于TCP面向字节流；一个字节占一个序号，<strong>序号字段seq</strong>指一个<strong>报文段</strong>第一个字节的序号。</li>
 <li>确认：接受方每收到一个报文段都会返回一个确认报文段（报文段中<strong>确认号字段ack</strong>为期待收到的下一个字节，告知发送方下一个应该发送的报文段）；TCP默认使用累计确认机制，即TCP只确认数据流当中自第一个丢失为止的字节。</li>
-<li>重传：TCP的发送方在<strong>规定的时间</strong>（重传时间）内没有收到确认就要重传已发送的报文段，即超时重传。</li>
+<li>重传：TCP的发送方在<strong>规定的时间</strong>（重传时间）内没有收到确认就要重传已发送的报文段，即<strong>超时重传</strong>。</li>
 </ol>
 <ul>
 <li>重传时间：制定过短会让传播时间较长的报文段很容易就超出时间；过长会导致网络空闲时间较长，降低网络利用率；</li>
 <li>TCP采用自适应算法，动态改变重传时间RTTs（加权平均往返时间）；取决于每一个报文段的RTT（往返时间）；</li>
 </ul>
 <ol start="5">
-<li>快速重传：基于冗余ACK（确认）：每当比期望序号大的失序报文段到达时，发送一个冗余ACK，指明下一个期待字节的序号；</li>
+<li><strong>快速重传</strong>：基于冗余ACK（确认）：每当比期望序号大的失序报文段到达时，发送一个冗余ACK，指明下一个期待字节的序号；</li>
 </ol>
 </li>
 </ul>
@@ -634,14 +634,30 @@
 </li>
 </ul>
 <h4 id="6-拥塞控制"><a href="#6-拥塞控制" class="headerlink" title="6. 拥塞控制"></a>6. 拥塞控制</h4><ul>
-<li>出现拥塞的条件：对资源需求的中和&gt;可用资源</li>
-<li>作用：防止过多的数据注入到网络中。（<strong>全局性</strong>）</li>
-<li>拥塞控制四种算法：<ul>
-<li>慢开始：</li>
-<li>拥塞避免：</li>
-<li>快重传：</li>
-<li>快恢复 ：</li>
+<li><p>出现拥塞的条件：对资源需求的中和&gt;可用资源</p>
+</li>
+<li><p>作用：防止过多的数据注入到网络中。（<strong>全局性</strong>）</p>
+</li>
+<li><p>与流量控制<strong>同异</strong>：</p>
+<ul>
+<li>均减缓发送方发送速率；</li>
+<li>流量控制点对点控制，是由于发送太快导致<strong>接受不过来</strong>。拥塞控制是由于全局性发生网络堵塞，导致接受方<strong>迟迟接受不到</strong>数据。</li>
 </ul>
+</li>
+<li><p>拥塞控制四种算法：</p>
+<ul>
+<li>两个概念：<ul>
+<li>接受窗口rwnd：<strong>接收方</strong>根据接受缓存设置的值，并告知发送方，反映接收方容量。</li>
+<li>拥塞窗口cwnd：<strong>发送方</strong>根据自己估算的网络拥塞程度而设置的窗口值，反映网络当前容量。</li>
+</ul>
+</li>
+<li>慢开始&amp;拥塞避免：</li>
+</ul>
+<p><img src="./medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/laityy/photo/images/%E6%85%A2%E5%BC%80%E5%A7%8B%E6%8B%A5%E5%A1%9E%E9%81%BF%E5%85%8D.jpg" alt="慢开始拥塞避免机制"></p>
+<ul>
+<li>快重传&amp;快恢复：</li>
+</ul>
+<p><img src="./medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/laityy/photo/images/%E5%BF%AB%E9%87%8D%E4%BC%A0%E5%BF%AB%E6%81%A2%E5%A4%8D.jpg" alt="快重传快恢复机制"></p>
 </li>
 </ul>
 <script>
@@ -733,12 +749,12 @@
                     
                 </div>
                 <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
-                    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/laityy/laityy.github.io/libs/share/css/share.min.css">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
 <div id="article-share">
 
     
     <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
-    <script src="https://cdn.jsdelivr.net/gh/laityy/laityy.github.io/libs/share/js/social-share.min.js"></script>
+    <script src="/libs/share/js/social-share.min.js"></script>
     
 
     
@@ -856,10 +872,10 @@
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="./medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/laityy/laityy.github.io/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="./medias/loading.gif" data-original="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="./medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/laityy/laityy.github.io/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="./medias/loading.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -878,8 +894,8 @@
     </div>
 
     
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/laityy/laityy.github.io/libs/gitalk/gitalk.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/laityy/laityy.github.io/css/my-gitalk.css">
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
 
 <div class="card gitalk-card" data-aos="fade-up">
     <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
@@ -889,7 +905,7 @@
     <div id="gitalk-container" class="card-content"></div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/gh/laityy/laityy.github.io/libs/gitalk/gitalk.min.js"></script>
+<script src="/libs/gitalk/gitalk.min.js"></script>
 <script>
     let gitalk = new Gitalk({
         clientID: '17235005e8b3471d5c27',
@@ -929,7 +945,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="./medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/laityy/laityy.github.io/medias/featureimages/4.jpg" class="responsive-img" alt="实用工具">
+                        <img src="./medias/loading.gif" data-original="/medias/featureimages/4.jpg" class="responsive-img" alt="实用工具">
                         
                         <span class="card-title">实用工具</span>
                     </div>
@@ -990,7 +1006,7 @@ ProcessOn
                     <div class="card-image">
                         
                         
-                        <img src="./medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/laityy/laityy.github.io/medias/featureimages/22.jpg" class="responsive-img" alt="博客魔改历程">
+                        <img src="./medias/loading.gif" data-original="/medias/featureimages/22.jpg" class="responsive-img" alt="博客魔改历程">
                         
                         <span class="card-title">博客魔改历程</span>
                     </div>
@@ -1025,21 +1041,21 @@ ProcessOn
 
 
 <!-- 代码块功能依赖 -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/laityy/laityy.github.io/libs/codeBlock/codeBlockFuction.js"></script>
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
 
 <!-- 代码语言 -->
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/laityy/laityy.github.io/libs/codeBlock/codeLang.js"></script>
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
 
 
 <!-- 代码块复制 -->
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/laityy/laityy.github.io/libs/codeBlock/codeCopy.js"></script>
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
 
 
 <!-- 代码块收缩 -->
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/laityy/laityy.github.io/libs/codeBlock/codeShrink.js"></script>
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
 
 
 <!-- 代码块折行 -->
@@ -1067,7 +1083,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 </div>
 
 
-<script src="https://cdn.jsdelivr.net/gh/laityy/laityy.github.io/libs/tocbot/tocbot.min.js"></script>
+<script src="/libs/tocbot/tocbot.min.js"></script>
 <script>
     $(function () {
         tocbot.init({
@@ -1165,7 +1181,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <span id="sitetime"></span><br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">3.4k</span>&nbsp;字
+                class="white-color">3.5k</span>&nbsp;字
             
             
             
@@ -1296,10 +1312,10 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
     </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/gh/laityy/laityy.github.io/js/search.js"></script>
+<script src="/js/search.js"></script>
 <script type="text/javascript">
 $(function () {
-    searchFunc("https://cdn.jsdelivr.net/gh/laityy/laityy.github.io/search.xml", 'searchInput', 'searchResult');
+    searchFunc("/search.xml", 'searchInput', 'searchResult');
 });
 </script>
 
@@ -1311,12 +1327,12 @@ $(function () {
 </div>
 
 
-    <script src="https://cdn.jsdelivr.net/gh/laityy/laityy.github.io/libs/materialize/materialize.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/laityy/laityy.github.io/libs/masonry/masonry.pkgd.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/laityy/laityy.github.io/libs/aos/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/laityy/laityy.github.io/libs/scrollprogress/scrollProgress.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/laityy/laityy.github.io/libs/lightGallery/js/lightgallery-all.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/laityy/laityy.github.io/js/matery.js"></script>
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
 
     <!-- Baidu Analytics -->
 
@@ -1337,12 +1353,10 @@ $(function () {
 </script>
 
     
-    <script src="https://cdn.jsdelivr.net/gh/laityy/laityy.github.io/libs/others/clicklove.js" async="async"></script>
+    <script src="/libs/others/clicklove.js" async="async"></script>
     
     
-    <script async src="https://cdn.jsdelivr.net/gh/laityy/laityy.github.io/libs/others/busuanzi.pure.mini.js"></script>
-    
-
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
     
 
     
@@ -1354,7 +1368,9 @@ $(function () {
     
 
     
-    <script src="https://cdn.jsdelivr.net/gh/laityy/laityy.github.io/libs/instantpage/instantpage.js" type="module"></script>
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
 <script>
@@ -1373,7 +1389,7 @@ $(function () {
 </script>
 <!--动态线条背景-->
 <script type="text/javascript"
-color="0 245 255" opacity='0.7' zIndex="-2" count="175" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+color="85,26,139" opacity='0.9' zIndex="-2" count="150" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
 </script>
 <script type="text/javascript">
     //只在桌面版网页启用特效
