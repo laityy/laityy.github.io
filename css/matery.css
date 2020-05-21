@@ -280,7 +280,7 @@ mark {
 }
 
 header .side-nav {
-    width: 180px;
+    width: 165px;
     z-index: 999;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 7px 10px 0 rgba(0, 0, 0, 0.12);
 }
@@ -1829,7 +1829,7 @@ footer {
 }
 
 footer .social-statis {
-    margin-top: 10px;
+    margin-top: 28px;
     position: relative;
 }
 
@@ -2099,8 +2099,8 @@ footer .copy-right {
 }
 
 .m-nav-item ul li {
-    width: 255px;
-    height: 50px;
+    width: 180px;
+    height: 36px;
     line-height: 50px;
     text-align: center;
 }
