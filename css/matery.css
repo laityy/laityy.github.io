@@ -743,6 +743,7 @@ header .go-back i {
 .index-card .card .card-content {
     padding: 20px 40px;
     background-color: #d6e7efe0;
+    box-shadow: 0 0 5px 0px #0a6c729c;
 }
 
 @media only screen and (min-width: 1418px) {
