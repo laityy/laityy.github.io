@@ -267,7 +267,7 @@ mark {
     position: fixed;
     bottom: 0;
     z-index: 300;
-    background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
+    background: linear-gradient(to right, #4098e0 20%, #aa32e2 80%);
     opacity: 0.8;
 }
 
@@ -1388,7 +1388,7 @@ thead {
     left: 18px;
     height: 100%;
     width: 4px;
-    background: #0f9d58;
+    background: #f010bf;
 }
 
 @media only screen and (min-width: 900px) {
