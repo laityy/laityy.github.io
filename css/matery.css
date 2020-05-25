@@ -5,11 +5,6 @@
         width: 95%;
     }
 }
-body {
-    background-color: #b6fdfd80;
-    margin: 0;
-    color: rgb(31, 30, 49);
-}
 
 /*中等屏幕下(平板类)的样式*/
 @media only screen and (min-width: 600px) and (max-width: 992px) {
@@ -744,29 +739,23 @@ header .go-back i {
     margin-top: -30px;
     padding-top: 30px;
 }
-.index-card .card .card-content:hover{
-    
-    box-shadow: 0 0 12px 1px #0a6c729c;
-}
+
 .index-card .card .card-content {
     padding: 20px 40px;
     background-color: #d6e7efe0;
-    
+    box-shadow: 0 0 5px 0px #0a6c729c;
 }
 
 @media only screen and (min-width: 1418px) {
     .recommend {
         margin-top: 20px;
         padding: 0 0.75rem;
-        
     }
 }
 
 @media only screen and (max-width: 601px) {
     .index-card .card .card-content {
         padding: 10px 10px;
-        background-color: #d6e7efe0;
-        box-shadow: 0 0 12px 1px #0a6c729c;
     }
 }
 
@@ -774,7 +763,6 @@ header .go-back i {
 @media only screen and (min-width: 600px) and (max-width: 992px) {
     .index-card .card .card-content {
         padding: 20px 20px;
-        background-color: #d6e7efe0;
     }
 }
 
