@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>Git版本控制系统</title>
+      <link href="/posts/1990.html"/>
+      <url>/posts/1990.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><h3 id="Git简介"><a href="#Git简介" class="headerlink" title="Git简介"></a>Git简介</h3><p> git是一个开源式的分布式版本控制系统，与之相对应的集中式版本控制系统主要有CVS(最早，开源)，SVN(使用最多，开源)，VSS(集成在visual studio中)…分布式主要有git，Mercurial，Monotone…</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>实用工具</title>
       <link href="/posts/64490.html"/>
       <url>/posts/64490.html</url>
