@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://laityy.github.io/"/>
-  <updated>2020-05-29T13:39:54.899Z</updated>
+  <updated>2020-05-31T07:30:46.797Z</updated>
   <id>http://laityy.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://laityy.github.io/posts/1990.html"/>
     <id>http://laityy.github.io/posts/1990.html</id>
     <published>2020-05-29T04:52:51.000Z</published>
-    <updated>2020-05-29T13:39:54.899Z</updated>
+    <updated>2020-05-31T07:30:46.797Z</updated>
     
     <summary type="html">
     
@@ -36,6 +36,10 @@
     </summary>
     
     
+    
+      <category term="Git" scheme="http://laityy.github.io/tags/Git/"/>
+    
+      <category term="工具" scheme="http://laityy.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
