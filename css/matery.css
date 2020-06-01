@@ -322,11 +322,12 @@ header .button-collapse i {
 }
 
 header .side-nav .mobile-head {
-    padding: 0 15px;
+    padding: 2px 15px;
 }
 
 header .side-nav .mobile-head img {
     margin-top: 30px;
+    margin-left: 16px;
     width: 75px;
     height: 75px;
 }
@@ -747,6 +748,7 @@ header .go-back i {
     padding: 20px 40px;
     background-color: #fff;
     box-shadow: 0 0 5px 0px #0a6c729c;
+    border-radius: 10px;
 }
 
 @media only screen and (min-width: 1418px) {
@@ -759,6 +761,7 @@ header .go-back i {
 @media only screen and (max-width: 601px) {
     .index-card .card .card-content {
         padding: 10px 10px;
+        border-radius: 10px;
     }
 }
 
@@ -766,6 +769,7 @@ header .go-back i {
 @media only screen and (min-width: 600px) and (max-width: 992px) {
     .index-card .card .card-content {
         padding: 20px 20px;
+        border-radius: 20px
     }
 }
 
