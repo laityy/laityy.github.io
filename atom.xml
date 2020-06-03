@@ -5,9 +5,9 @@
   <subtitle>Wang&#39;s Blog</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://laityy.github.io/"/>
-  <updated>2020-05-31T07:30:46.797Z</updated>
-  <id>http://laityy.github.io/</id>
+  <link href="http://tenpages.cn/"/>
+  <updated>2020-06-03T11:41:47.661Z</updated>
+  <id>http://tenpages.cn/</id>
   
   <author>
     <name>Laity</name>
@@ -17,9 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>HTML基础</title>
+    <link href="http://tenpages.cn/421.html"/>
+    <id>http://tenpages.cn/421.html</id>
+    <published>2020-06-03T08:18:52.000Z</published>
+    <updated>2020-06-03T11:41:47.661Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="html" scheme="http://tenpages.cn/tags/html/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Git版本控制系统</title>
-    <link href="http://laityy.github.io/posts/1990.html"/>
-    <id>http://laityy.github.io/posts/1990.html</id>
+    <link href="http://tenpages.cn/1990.html"/>
+    <id>http://tenpages.cn/1990.html</id>
     <published>2020-05-29T04:52:51.000Z</published>
     <updated>2020-05-31T07:30:46.797Z</updated>
     
@@ -37,16 +62,16 @@
     
     
     
-      <category term="Git" scheme="http://laityy.github.io/tags/Git/"/>
+      <category term="Git" scheme="http://tenpages.cn/tags/Git/"/>
     
-      <category term="工具" scheme="http://laityy.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
+      <category term="工具" scheme="http://tenpages.cn/tags/%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
   <entry>
     <title>实用工具</title>
-    <link href="http://laityy.github.io/posts/64490.html"/>
-    <id>http://laityy.github.io/posts/64490.html</id>
+    <link href="http://tenpages.cn/64490.html"/>
+    <id>http://tenpages.cn/64490.html</id>
     <published>2020-05-14T02:45:18.259Z</published>
     <updated>2020-06-01T11:53:01.509Z</updated>
     
@@ -64,14 +89,14 @@
     
     
     
-      <category term="工具" scheme="http://laityy.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
+      <category term="工具" scheme="http://tenpages.cn/tags/%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
   <entry>
     <title>传输层TCP/UDP协议</title>
-    <link href="http://laityy.github.io/posts/34721.html"/>
-    <id>http://laityy.github.io/posts/34721.html</id>
+    <link href="http://tenpages.cn/34721.html"/>
+    <id>http://tenpages.cn/34721.html</id>
     <published>2020-05-13T06:51:34.000Z</published>
     <updated>2020-05-21T01:54:57.481Z</updated>
     
@@ -88,17 +113,17 @@
     </summary>
     
     
-      <category term="计算机网络" scheme="http://laityy.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+      <category term="计算机网络" scheme="http://tenpages.cn/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
     
     
-      <category term="计算机网络" scheme="http://laityy.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+      <category term="计算机网络" scheme="http://tenpages.cn/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
     
   </entry>
   
   <entry>
     <title>博客魔改历程</title>
-    <link href="http://laityy.github.io/posts/60707.html"/>
-    <id>http://laityy.github.io/posts/60707.html</id>
+    <link href="http://tenpages.cn/60707.html"/>
+    <id>http://tenpages.cn/60707.html</id>
     <published>2020-05-12T06:34:03.000Z</published>
     <updated>2020-06-02T05:30:54.920Z</updated>
     
@@ -120,8 +145,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://laityy.github.io/posts/16107.html"/>
-    <id>http://laityy.github.io/posts/16107.html</id>
+    <link href="http://tenpages.cn/16107.html"/>
+    <id>http://tenpages.cn/16107.html</id>
     <published>2020-05-11T15:31:54.630Z</published>
     <updated>2020-05-15T13:26:46.061Z</updated>
     

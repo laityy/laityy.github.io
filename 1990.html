@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="博客魔改历程, HTML,CSS,JavaScript,JQuery,React,Vue.js等">
+    <meta name="keywords" content="Git版本控制系统, HTML,CSS,JavaScript,JQuery,React,Vue.js等">
     <meta name="description" content="专注于CS，分享生活，分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>博客魔改历程 | ~Wangs</title>
+    <title>Git版本控制系统 | ~Wangs</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/laityy/cdn/source/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/laityy/cdn/source/libs/awesome/css/all.css">
@@ -311,12 +311,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/laityy/cdn/source/medias/featureimages/22.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/laityy/photo/images/git2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">博客魔改历程</h1>
+                    <h1 class="description center-align post-title">Git版本控制系统</h1>
                 </div>
             </div>
         </div>
@@ -442,9 +442,17 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Git/">
+                                <span class="chip bg-color">Git</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%B7%A5%E5%85%B7/">
+                                <span class="chip bg-color">工具</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -456,7 +464,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-05-12
+                    2020-05-29
                 </div>
                 
 
@@ -465,14 +473,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    756
+                    118
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
 
@@ -487,39 +495,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="matery主题魔改记录"><a href="#matery主题魔改记录" class="headerlink" title="matery主题魔改记录"></a>matery主题魔改记录</h2><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>第一次学着搭博客，起初毫无头绪也没有源码基础，跟着B站上的视频部署了hexo环境，安装了hexo默认主题，打开自己做好的博客的那一刻的成就感也确实成为了现在我想了解前端的动力之一，后面阴差阳错的接触到了matery这款主题，这款主题相对复杂一些，魔改过程也比我想的要困难很多（因为丝毫不懂CSS，JS等前端语言），所有的一切都只能百度谷歌。下面记录一下主要的魔改过程吧。</p>
-<h3 id="一：一些特效插件"><a href="#一：一些特效插件" class="headerlink" title="一：一些特效插件"></a>一：一些特效插件</h3><p>我安装的一些主题特效插件都是跟着网上教程弄的，记录一些我觉得比较好的插件</p>
-<ol>
-<li>背景动态线条:可以自定义线条数量颜色以及透明度，填充背景使其视觉效果更饱满</li>
-<li>鼠标跟随星星和点击界面显示爱心和文字</li>
-<li>其他的个人觉得在移动端上显示有点遮挡内容</li>
-</ol>
-<h3 id="二：medias个性化"><a href="#二：medias个性化" class="headerlink" title="二：medias个性化"></a>二：medias个性化</h3><p>medias文件夹里面是个人头像，网站主页，文章主页等博客图片的资源文件，可以随意替换，个人推荐很好的壁纸网站<a href="https://wallhaven.cc/" target="_blank" rel="noopener">wallhaven</a>，国内访问可能有点慢</p>
-<ol>
-<li>下载图片后，直接替换medias里的文件夹里的图片就好，注意图片名称改为与原始图片相同,若图片较大，可适当不失真压缩</li>
-<li>网站logo采用png格式，故可以使用ps自己制作透明logo 同时也有个制作logo的网站<a href="http://www.uugai.com/" target="_blank" rel="noopener">U钙网</a>。</li>
-<li>音乐配置方面，可以直接修改配置文件里的musics，添加音乐平台和歌单地址就好（只能在线播放），还可以下载音乐文件到<code>matery\source\medias\music</code>,还需自己找歌曲图片，最后配置<code>musics.json</code>文件。</li>
-</ol>
-<h3 id="三：加快网页加载速度"><a href="#三：加快网页加载速度" class="headerlink" title="三：加快网页加载速度"></a>三：加快网页加载速度</h3><ol>
-<li>jsd的CDN加速，js，css文件都使用CDN加载</li>
-<li>博客图片采用图床，就是云端托管图片，再用jsd引用，本质也是jsd加速</li>
-<li>图片懒加载，安装相应插件，可自定义loading…加载图</li>
-<li>网页部署到coding或gitee，coding服务器也在海外，效果不太明显，gitee不能自定义域名，速度很快，另外也可采用阿里云和腾讯云的网页托管服务</li>
-</ol>
-<h3 id="四：字体颜色大小和界面颜色"><a href="#四：字体颜色大小和界面颜色" class="headerlink" title="四：字体颜色大小和界面颜色"></a>四：字体颜色大小和界面颜色</h3><ol>
-<li><code>matery.css</code>文件中可随意修改相关颜色，包括nav的渐变色,font,background的颜色</li>
-</ol>
-<h3 id="五：完善博客常访问的网站"><a href="#五：完善博客常访问的网站" class="headerlink" title="五：完善博客常访问的网站"></a>五：完善博客常访问的网站</h3><ol>
-<li><a href="www.wallhaven.cc">wallhaven</a></li>
-</ol>
-<p>图片分辨率很高，很适合做banner图，主要的壁纸都可从该网站上找</p>
-<ol start="2">
-<li>图标库 [fontawesome] [icomoon] [iconfont]</li>
-</ol>
-<ol start="3">
-<li>CSDN 博客园等交流社区</li>
-<li></li>
-</ol>
+                <h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><h3 id="Git简介"><a href="#Git简介" class="headerlink" title="Git简介"></a>Git简介</h3><p> git是一个开源式的分布式版本控制系统，与之相对应的集中式版本控制系统主要有CVS(最早，开源)，SVN(使用最多，开源)，VSS(集成在visual studio中)…分布式主要有git，Mercurial，Monotone…</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -553,7 +529,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://laityy.github.io" rel="external nofollow noreferrer">Laity</a>
+                    <a href="http://tenpages.cn" rel="external nofollow noreferrer">Laity</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -563,7 +539,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://laityy.github.io/posts/60707.html">http://laityy.github.io/posts/60707.html</a>
+                    <a href="http://tenpages.cn/1990.html">http://tenpages.cn/1990.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -576,7 +552,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="http://laityy.github.io" target="_blank">Laity</a>
+                    <a href="http://tenpages.cn" target="_blank">Laity</a>
                     !
                 </span>
             </div>
@@ -600,7 +576,15 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/Git/">
+                                    <span class="chip bg-color">Git</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%B7%A5%E5%85%B7/">
+                                    <span class="chip bg-color">工具</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -1033,36 +1017,31 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/34721.html">
+                <a href="/421.html">
                     <div class="card-image">
                         
+                        <img src="https://cdn.jsdelivr.net/gh/laityy/cdn/source/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/laityy/photo/images/landscape2.jpg" class="responsive-img" alt="HTML基础">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/laityy/cdn/source/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/laityy/cdn/source/medias/featureimages/3.jpg" class="responsive-img" alt="传输层TCP/UDP协议">
-                        
-                        <span class="card-title">传输层TCP/UDP协议</span>
+                        <span class="card-title">HTML基础</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            传输层协议UDP/TCPUDP协议1. 特点:
-无连接，尽最大努力交付   
-不保证可靠交付，面向报文（对应用层报文长度不做修改，全部发送给网络层，即一次发送一个完整的报文，就可能需要网络层需要分片，适合一次传输少量数据）
-没有拥塞控制（允
+                            前言html是前端入门基础之一，同时也是web标准中最重要的一部分。下面主要记录一些html中常用标签及语法；
+下面标签以结构和功能进行区分，结构指划分区域的标签，往往不能直接表现出的，功能是指在区域的基础上进行可视化的操作
+结构标签
+&l
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-13
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-03
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="post-category">
-                                    计算机网络
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Laity
                             
                         </span>
                     </div>
@@ -1070,8 +1049,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
-                        <span class="chip bg-color">计算机网络</span>
+                    <a href="/tags/html/">
+                        <span class="chip bg-color">html</span>
                     </a>
                     
                 </div>
@@ -1085,24 +1064,40 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/16107.html">
+                <a href="/64490.html">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/laityy/cdn/source/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/laityy/cdn/source/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="https://cdn.jsdelivr.net/gh/laityy/cdn/source/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/laityy/cdn/source/medias/featureimages/4.jpg" class="responsive-img" alt="实用工具">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">实用工具</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
+                            主要介绍一些学习中可能使用的实用工具文档转换
+轻松玩转pdf
+
+
+pdf文档的转换和编辑加密等
+
+
+CleverPDF
+
+
+27个强大的PDF在线工具，完全免费！
+
+
+ProcessOn
+
+
+免费支持在线作图，实时协作。支持流程图，思维导图
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-11
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-14
                             </span>
                         <span class="publish-author">
                             
@@ -1111,6 +1106,14 @@
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%B7%A5%E5%85%B7/">
+                        <span class="chip bg-color">工具</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -1256,7 +1259,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             <span id="year">2020</span>
-            <a href="http://laityy.github.io" target="_blank">Laity</a>
+            <a href="http://tenpages.cn" target="_blank">Laity</a>
             <br>
             Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             &&&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
@@ -1264,7 +1267,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <span id="sitetime"></span><br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">3.9k</span>&nbsp;字
+                class="white-color">5.1k</span>&nbsp;字
             
             
             
