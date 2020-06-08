@@ -340,9 +340,7 @@
 
 
 <script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+    $('.bg-cover').css('background-image', 'url(/medias/banner/0.jpg)');
 </script>
 
 
@@ -362,19 +360,10 @@
             <div class="tag-chips">
                 
                 
-                <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" title="计算机网络: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="计算机网络" style="background-color: #F9EBEA;">计算机网络
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
                 <a href="/tags/Git/" title="Git: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="Git" style="background-color: #F5EEF8;">Git
+                            data-tagname="Git" style="background-color: #F9EBEA;">Git
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -383,8 +372,17 @@
                 <a href="/tags/%E5%B7%A5%E5%85%B7/" title="工具: 2">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="工具" style="background-color: #D5F5E3;">工具
+                            data-tagname="工具" style="background-color: #F5EEF8;">工具
                         <span class="tag-length">2</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" title="计算机网络: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="计算机网络" style="background-color: #D5F5E3;">计算机网络
+                        <span class="tag-length">1</span>
                     </span>
                 </a>
                 
@@ -421,7 +419,7 @@
 <script type="text/javascript">
     
 
-    $('#tag-wordcloud').jQCloud([{"text":"计算机网络","weight":1,"link":"http://tenpages.cn/tags/计算机网络/"},{"text":"Git","weight":1,"link":"http://tenpages.cn/tags/Git/"},{"text":"工具","weight":2,"link":"http://tenpages.cn/tags/工具/"},{"text":"html","weight":1,"link":"http://tenpages.cn/tags/html/"}], {
+    $('#tag-wordcloud').jQCloud([{"text":"Git","weight":1,"link":"http://tenpages.cn/tags/Git/"},{"text":"工具","weight":2,"link":"http://tenpages.cn/tags/工具/"},{"text":"计算机网络","weight":1,"link":"http://tenpages.cn/tags/计算机网络/"},{"text":"html","weight":1,"link":"http://tenpages.cn/tags/html/"}], {
         autoResize: true
     });
 </script>
