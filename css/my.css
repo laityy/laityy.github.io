@@ -58,7 +58,7 @@
 }
 @font-face {
   font-family: "方正北魏楷书简体";
-  src: url("../box/font/方正北魏楷书简体.ttf");
+  src: url("https://cdn.jsdelivr.net/gh/laityy/cdn/source/box/font/方正北魏楷书简体.ttf");
 }
 body {
   font-family: "方正北魏楷书简体";
