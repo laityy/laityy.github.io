@@ -171,112 +171,114 @@
 
 <div id="mobile-nav" class="side-nav sidenav">
   <!-- 导航栏头部开始 -->
-    <div class="mobile-head bg-color">
-        
-        <img src="https://cdn.jsdelivr.net/gh/laityy/cdn/source/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/laityy/cdn/source/medias/Stitch.png" class="logo-img circle responsive-img">
-        
-        <div class="logo-name">~Wangs</div>
-        <div class="logo-desc">
-            
-            想学前端的学生狗，在学习中分享快乐
-            
-        </div>
-    </div>
- <!-- 导航栏头部结束 -->
+  <div class="mobile-head bg-color">
     
- <!-- 导航栏主体内容部分 -->
-    <ul class="menu-list mobile-menu-list">
+    <img src="https://cdn.jsdelivr.net/gh/laityy/cdn/source/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/laityy/cdn/source/medias/Stitch.png" class="logo-img circle responsive-img">
+    
+    <div class="logo-name">~Wangs</div>
+    <div class="logo-desc">
+      
+      想学前端的学生狗，在学习中分享快乐
+      
+    </div>
+  </div>
+  <style>
+    .m-nav-item ul li span {
+      color: #335d81;
+    }
+  </style>
+  <!-- 导航栏头部结束 -->
+  
+  <!-- 导航栏主体内容部分 -->
+  <ul class="menu-list mobile-menu-list">
+    
+    <li class="m-nav-item">
+      
+      <a href="/" class="waves-effect waves-light">
         
-        <li class="m-nav-item">
-	  
-		<a href="/" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-home"></i>
-			
-			首页
-		</a>
-          
+        <i class="fa-fw fas fa-home"></i>
+        
+        首页
+      </a>
+      
         </li>
         
-        <li class="m-nav-item">
-	  
-		<a href="/tags" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-tags"></i>
-			
-			标签
-		</a>
-          
+    <li class="m-nav-item">
+      
+      <a href="/tags" class="waves-effect waves-light">
+        
+        <i class="fa-fw fas fa-tags"></i>
+        
+        标签
+      </a>
+      
         </li>
         
-        <li class="m-nav-item">
-	  
-		<a href="/categories" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-bookmark"></i>
-			
-			分类
-		</a>
-          
+    <li class="m-nav-item">
+      
+      <a href="/categories" class="waves-effect waves-light">
+        
+        <i class="fa-fw fas fa-bookmark"></i>
+        
+        分类
+      </a>
+      
         </li>
         
-        <li class="m-nav-item">
-	  
-		<a href="/archives" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-archive"></i>
-			
-			归档
-		</a>
-          
+    <li class="m-nav-item">
+      
+      <a href="/archives" class="waves-effect waves-light">
+        
+        <i class="fa-fw fas fa-archive"></i>
+        
+        归档
+      </a>
+      
         </li>
         
-        <li class="m-nav-item">
-	  
-		<a href="javascript:;">
-			
-				<i class="fa-fw fas fa-heartbeat"></i>
-			
-			清单
-			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
-		</a>
-            <ul  style="background:  ;" >
-              
-                <li>
+    <li class="m-nav-item">
+      
+      <!-- 二级菜单按钮不需跳转，添加js:; -->
+      <a href="javascript:;">
+        
+        <i class="fa-fw fas fa-heartbeat"></i>
+        
+        清单
+        <span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+      </a>
+      <ul  style="background:  ;"  >
+               <li>
 
-                  <a href="/musics " style="margin-left:50px">
+        <a href="/musics " style="margin-left:50px">
 				  
-				   <i class="fa fas fa-music" style="position: absolute;left:28px" ></i>
+				   <i class=" fa fas fa-music" style="position: absolute;left:28px" ></i>
 			      
 		          <span>音乐</span>
                   </a>
                 </li>
-              
-                <li>
+               <li>
 
-                  <a href="/movies " style="margin-left:50px">
+        <a href="/movies " style="margin-left:50px">
 				  
-				   <i class="fa fas fa-film" style="position: absolute;left:28px" ></i>
+				   <i class=" fa fas fa-film" style="position: absolute;left:28px" ></i>
 			      
 		          <span>电影</span>
                   </a>
                 </li>
-              
-                <li>
+               <li>
 
-                  <a href="/books " style="margin-left:50px">
+        <a href="/books " style="margin-left:50px">
 				  
-				   <i class="fa fas fa-book" style="position: absolute;left:28px" ></i>
+				   <i class=" fa fas fa-book" style="position: absolute;left:28px" ></i>
 			      
 		          <span>书单</span>
                   </a>
                 </li>
-              
-                <li>
+               <li>
 
-                  <a href="/videos " style="margin-left:50px">
+        <a href="/videos " style="margin-left:50px">
 				  
-				   <i class="fa fas fa-pause" style="position: absolute;left:28px" ></i>
+				   <i class=" fa fas fa-pause" style="position: absolute;left:28px" ></i>
 			      
 		          <span>视频</span>
                   </a>
@@ -286,22 +288,21 @@
           
         </li>
         
-        <li class="m-nav-item">
-	  
-		<a href="/about" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-paw"></i>
-			
-			关于laity
-		</a>
-          
+    <li class="m-nav-item">
+      
+      <a href="/about" class="waves-effect waves-light">
+        
+        <i class="fa-fw fas fa-paw"></i>
+        
+        关于laity
+      </a>
+      
         </li>
         
         <!-- githubLink是否显示 -->
         
-    </ul>
+</ul>
 </div>
-
 
         </div>
 
@@ -367,19 +368,10 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/0.jpg)');
             <div class="tag-chips">
                 
                 
-                <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" title="计算机网络: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="计算机网络" style="background-color: #F9EBEA;">计算机网络
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
                 <a href="/tags/Git/" title="Git: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="Git" style="background-color: #F5EEF8;">Git
+                            data-tagname="Git" style="background-color: #F9EBEA;">Git
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -388,8 +380,17 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/0.jpg)');
                 <a href="/tags/%E5%B7%A5%E5%85%B7/" title="工具: 2">
                     <span class="chip center-align waves-effect waves-light
                              chip-active "
-                            data-tagname="工具" style="background-color: #D5F5E3;">工具
+                            data-tagname="工具" style="background-color: #F5EEF8;">工具
                         <span class="tag-length">2</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" title="计算机网络: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="计算机网络" style="background-color: #D5F5E3;">计算机网络
+                        <span class="tag-length">1</span>
                     </span>
                 </a>
                 
