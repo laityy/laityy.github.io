@@ -38,7 +38,7 @@
 <body>
     <header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
-        <div id="navContainer" class="nav-wrapper container">
+        <div id="navContainer" class="nav-wrapper">
             <div class="brand-logo">
                 <a href="/" class="waves-effect waves-light">
                     <div>
@@ -303,14 +303,20 @@
         
 </ul>
 </div>
-
         </div>
 
         
     </nav>
 
 </header>
-
+<style>
+    .brand-logo{
+        left: 10%;
+    }
+    .right{
+    margin-right: 4%;
+  }
+</style>
     <!-- index-cover.ejs -->
     <!-- index.ejs -->
     <style type="text/css">
@@ -557,7 +563,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/0.jpg)');
         },
         xAxis: {
             type: 'category',
-            data: ["2019-07","2019-08","2019-09","2019-10","2019-11","2019-12","2020-01","2020-02","2020-03","2020-04","2020-05","2020-06","2020-07"]
+            data: ["2019-08","2019-09","2019-10","2019-11","2019-12","2020-01","2020-02","2020-03","2020-04","2020-05","2020-06","2020-07","2020-08"]
         },
         yAxis: {
             type: 'value',
@@ -567,7 +573,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/0.jpg)');
                 name: '文章篇数',
                 type: 'line',
                 color: ['#6772e5'],
-                data: [0,0,0,0,0,0,0,0,0,0,5,1,0],
+                data: [0,0,0,0,0,0,0,0,0,5,1,0,0],
                 markPoint: {
                     symbolSize: 45,
                     color: ['#fa755a','#3ecf8e','#82d3f4'],
@@ -633,7 +639,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/0.jpg)');
         xAxis: [
             {
                 type: 'category',
-                data: ["工具","Git","计算机网络","html"]
+                data: ["工具","计算机网络","Git","html"]
             }
         ],
         yAxis: [
@@ -694,7 +700,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/0.jpg)');
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             <span id="year">2020</span>
-            <a href="http://tenpages.cn" target="_blank">Laity</a>
+            <a href="https://tenpages.cn/posts" target="_blank">Laity</a>
             <br>
             Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             &&&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>

@@ -38,7 +38,7 @@
 <body>
     <header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
-        <div id="navContainer" class="nav-wrapper container">
+        <div id="navContainer" class="nav-wrapper">
             <div class="brand-logo">
                 <a href="/" class="waves-effect waves-light">
                     <div>
@@ -303,14 +303,20 @@
         
 </ul>
 </div>
-
         </div>
 
         
     </nav>
 
 </header>
-
+<style>
+    .brand-logo{
+        left: 10%;
+    }
+    .right{
+    margin-right: 4%;
+  }
+</style>
     <!-- index-cover.ejs -->
     <!-- index.ejs -->
     <div class="bg-cover pd-header about-cover">
@@ -368,10 +374,19 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/0.jpg)');
             <div class="tag-chips">
                 
                 
+                <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" title="计算机网络: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="计算机网络" style="background-color: #F9EBEA;">计算机网络
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
                 <a href="/tags/Git/" title="Git: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="Git" style="background-color: #F9EBEA;">Git
+                            data-tagname="Git" style="background-color: #F5EEF8;">Git
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -380,17 +395,8 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/0.jpg)');
                 <a href="/tags/%E5%B7%A5%E5%85%B7/" title="工具: 2">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="工具" style="background-color: #F5EEF8;">工具
+                            data-tagname="工具" style="background-color: #D5F5E3;">工具
                         <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" title="计算机网络: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="计算机网络" style="background-color: #D5F5E3;">计算机网络
-                        <span class="tag-length">1</span>
                     </span>
                 </a>
                 
@@ -427,7 +433,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/0.jpg)');
 <script type="text/javascript">
     
 
-    $('#tag-wordcloud').jQCloud([{"text":"Git","weight":1,"link":"http://tenpages.cn/tags/Git/"},{"text":"工具","weight":2,"link":"http://tenpages.cn/tags/工具/"},{"text":"计算机网络","weight":1,"link":"http://tenpages.cn/tags/计算机网络/"},{"text":"html","weight":1,"link":"http://tenpages.cn/tags/html/"}], {
+    $('#tag-wordcloud').jQCloud([{"text":"计算机网络","weight":1,"link":"https://tenpages.cn/posts/tags/计算机网络/"},{"text":"Git","weight":1,"link":"https://tenpages.cn/posts/tags/Git/"},{"text":"工具","weight":2,"link":"https://tenpages.cn/posts/tags/工具/"},{"text":"html","weight":1,"link":"https://tenpages.cn/posts/tags/html/"}], {
         autoResize: true
     });
 </script>
@@ -443,7 +449,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/0.jpg)');
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             <span id="year">2020</span>
-            <a href="http://tenpages.cn" target="_blank">Laity</a>
+            <a href="https://tenpages.cn/posts" target="_blank">Laity</a>
             <br>
             Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             &&&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
