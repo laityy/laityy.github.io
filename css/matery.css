@@ -380,7 +380,9 @@ header .side-nav .fa-fw {
     text-align: left;
     margin-right: -12px;
 }
-
+header .side-nav li>a {
+    padding-right: 22px;
+}
 header .side-nav .social-link {
     position: absolute;
     bottom: 45px;
