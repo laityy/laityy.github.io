@@ -5,9 +5,9 @@
   <subtitle>Wang&#39;s Blog</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://tenpages.cn/posts/"/>
+  <link href="https://tenpages.cn/"/>
   <updated>2020-09-12T07:38:23.709Z</updated>
-  <id>https://tenpages.cn/posts/</id>
+  <id>https://tenpages.cn/</id>
   
   <author>
     <name>Laity</name>
@@ -41,7 +41,7 @@
     
     
     
-      <category term="JavaScript" scheme="https://tenpages.cn/posts/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="https://tenpages.cn/tags/JavaScript/"/>
     
   </entry>
   
@@ -70,7 +70,7 @@
     
     
     
-      <category term="JavaScript" scheme="https://tenpages.cn/posts/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="https://tenpages.cn/tags/JavaScript/"/>
     
   </entry>
   
@@ -99,9 +99,9 @@
     
     
     
-      <category term="JavaScript" scheme="https://tenpages.cn/posts/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="https://tenpages.cn/tags/JavaScript/"/>
     
-      <category term="Node.js" scheme="https://tenpages.cn/posts/tags/Node-js/"/>
+      <category term="Node.js" scheme="https://tenpages.cn/tags/Node-js/"/>
     
   </entry>
   
@@ -130,9 +130,9 @@
     
     
     
-      <category term="JavaScript" scheme="https://tenpages.cn/posts/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="https://tenpages.cn/tags/JavaScript/"/>
     
-      <category term="Node.js" scheme="https://tenpages.cn/posts/tags/Node-js/"/>
+      <category term="Node.js" scheme="https://tenpages.cn/tags/Node-js/"/>
     
   </entry>
   
@@ -161,7 +161,7 @@
     
     
     
-      <category term="JavaScript" scheme="https://tenpages.cn/posts/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="https://tenpages.cn/tags/JavaScript/"/>
     
   </entry>
   
@@ -190,7 +190,7 @@
     
     
     
-      <category term="JavaScript" scheme="https://tenpages.cn/posts/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="https://tenpages.cn/tags/JavaScript/"/>
     
   </entry>
   
@@ -219,7 +219,7 @@
     
     
     
-      <category term="JavaScript" scheme="https://tenpages.cn/posts/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="https://tenpages.cn/tags/JavaScript/"/>
     
   </entry>
   
@@ -244,7 +244,7 @@
     
     
     
-      <category term="html" scheme="https://tenpages.cn/posts/tags/html/"/>
+      <category term="html" scheme="https://tenpages.cn/tags/html/"/>
     
   </entry>
   
@@ -269,9 +269,9 @@
     
     
     
-      <category term="Git" scheme="https://tenpages.cn/posts/tags/Git/"/>
+      <category term="Git" scheme="https://tenpages.cn/tags/Git/"/>
     
-      <category term="工具" scheme="https://tenpages.cn/posts/tags/%E5%B7%A5%E5%85%B7/"/>
+      <category term="工具" scheme="https://tenpages.cn/tags/%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
@@ -296,7 +296,7 @@
     
     
     
-      <category term="工具" scheme="https://tenpages.cn/posts/tags/%E5%B7%A5%E5%85%B7/"/>
+      <category term="工具" scheme="https://tenpages.cn/tags/%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
@@ -320,10 +320,10 @@
     </summary>
     
     
-      <category term="计算机网络" scheme="https://tenpages.cn/posts/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+      <category term="计算机网络" scheme="https://tenpages.cn/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
     
     
-      <category term="计算机网络" scheme="https://tenpages.cn/posts/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+      <category term="计算机网络" scheme="https://tenpages.cn/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
     
   </entry>
   
@@ -348,7 +348,7 @@
     
     
     
-      <category term="博客" scheme="https://tenpages.cn/posts/tags/%E5%8D%9A%E5%AE%A2/"/>
+      <category term="博客" scheme="https://tenpages.cn/tags/%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   
