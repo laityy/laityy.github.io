@@ -380,9 +380,11 @@ header .side-nav .fa-fw {
     text-align: left;
     margin-right: -12px;
 }
+
 header .side-nav li>a {
     padding-right: 22px;
 }
+
 header .side-nav .social-link {
     position: absolute;
     bottom: 45px;
@@ -410,7 +412,7 @@ header .side-nav .social-link {
     font-size: 1.1rem;
     color: #fff;
     border: 1.5px solid rgba(255, 255, 255, 0.4);
-    background-color: #74e7f063;
+    background-color: #5fd1da75;
     border-radius: 45px;
     box-shadow: none;
     transition: all 0.5s;
