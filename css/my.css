@@ -2,70 +2,103 @@
 /* 自定义CSS文件 */
 /* hexo-filter-github-emojis */
 .github-emoji {
-  height: 2em;
-  width: 2em;
-  display: inline-block !important;
-  position: relative;
-  margin: 0 3px !important;
-  padding: 0;
+    height: 2em;
+    width: 2em;
+    display: inline-block !important;
+    position: relative;
+    margin: 0 3px !important;
+    padding: 0;
 }
 .github-emoji:hover {
-  animation: emoji-face 5s infinite ease-in-out;
+    animation: emoji-face 5s infinite ease-in-out;
 }
 @keyframes emoji-face {
-  2% {
-    transform: translate(0, 1.5px) rotate(1.5deg);
-  }
-  4% {
-    transform: translate(0, -1.5px) rotate(-0.5deg);
-  }
-  6% {
-    transform: translate(0, 1.5px) rotate(-1.5deg);
-  }
-  8% {
-    transform: translate(0, -1.5px) rotate(-1.5deg);
-  }
-  10% {
-    transform: translate(0, 2.5px) rotate(1.5deg);
-  }
-  12% {
-    transform: translate(0, -0.5px) rotate(1.5deg);
-  }
-  14% {
-    transform: translate(0, -1.5px) rotate(1.5deg);
-  }
-  16% {
-    transform: translate(0, -0.5px) rotate(-1.5deg);
-  }
-  18% {
-    transform: translate(0, 0.5px) rotate(-1.5deg);
-  }
-  20% {
-    transform: translate(0, -1.5px) rotate(2.5deg);
-  }
-  22% {
-    transform: translate(0, 0.5px) rotate(-1.5deg);
-  }
-  24% {
-    transform: translate(0, 1.5px) rotate(1.5deg);
-  }
-  26% {
-    transform: translate(0, 0.5px) rotate(0.5deg);
-  }
-  28% {
-    transform: translate(0, 0.5px) rotate(1.5deg);
-  }
+    2% {
+        transform: translate(0, 1.5px) rotate(1.5deg);
+    }
+    4% {
+        transform: translate(0, -1.5px) rotate(-0.5deg);
+    }
+    6% {
+        transform: translate(0, 1.5px) rotate(-1.5deg);
+    }
+    8% {
+        transform: translate(0, -1.5px) rotate(-1.5deg);
+    }
+    10% {
+        transform: translate(0, 2.5px) rotate(1.5deg);
+    }
+    12% {
+        transform: translate(0, -0.5px) rotate(1.5deg);
+    }
+    14% {
+        transform: translate(0, -1.5px) rotate(1.5deg);
+    }
+    16% {
+        transform: translate(0, -0.5px) rotate(-1.5deg);
+    }
+    18% {
+        transform: translate(0, 0.5px) rotate(-1.5deg);
+    }
+    20% {
+        transform: translate(0, -1.5px) rotate(2.5deg);
+    }
+    22% {
+        transform: translate(0, 0.5px) rotate(-1.5deg);
+    }
+    24% {
+        transform: translate(0, 1.5px) rotate(1.5deg);
+    }
+    26% {
+        transform: translate(0, 0.5px) rotate(0.5deg);
+    }
+    28% {
+        transform: translate(0, 0.5px) rotate(1.5deg);
+    }
 }
 /* 添加字体 注意字体文件名称不做修改 */
 @font-face {
-  font-family: "方正北魏楷书简体";
-  src: url("https://cdn.jsdelivr.net/gh/laityy/cdn/source/box/font/方正北魏楷书简体.ttf");
+    font-family: "方正北魏楷书简体";
+    src: url("https://cdn.jsdelivr.net/gh/laityy/cdn/source/box/font/方正北魏楷书简体.ttf");
 }
 /* body整体使用 */
 body {
-  font-family: "方正北魏楷书简体";
+    font-family: "方正北魏楷书简体";
 }
 /* 设置一个类，使用添加类名即可 */
 .diyFont {
-  font-family: "方正北魏楷书简体";
+    font-family: "方正北魏楷书简体";
+}
+
+nav ul a {
+    font-size: 1.1rem;
+    padding: 0 12px;
+}
+.brand-logo {
+    left: 4%;
+}
+
+.right {
+    margin-right: 3%;
+}
+@media only screen and (min-width: 601px) {
+    nav,
+    nav .nav-wrapper i,
+    nav a.sidenav-trigger,
+    nav a.sidenav-trigger i {
+        height: 57px;
+        line-height: 55px;
+    }
+}
+
+.btn-bgcolor {
+    background: linear-gradient(
+        to bottom left,
+        rgb(162 255 225 / 71%) 0%,
+        rgb(208 85 255) 100%
+    );
+}
+i.fas.fa-angle-right:hover,
+i.fas.fa-angle-left:hover {
+    color: rgb(202, 120, 240);
 }

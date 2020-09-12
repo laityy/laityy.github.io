@@ -4,6 +4,143 @@
   
     
     <entry>
+      <title>JavaScript记录</title>
+      <link href="/509.html"/>
+      <url>/509.html</url>
+      
+        <content type="html"><![CDATA[<script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>JavaScript事件</title>
+      <link href="/21459.html"/>
+      <url>/21459.html</url>
+      
+        <content type="html"><![CDATA[<script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>node.js下</title>
+      <link href="/63439.html"/>
+      <url>/63439.html</url>
+      
+        <content type="html"><![CDATA[<script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+            <tag> Node.js </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>node.js上</title>
+      <link href="/53734.html"/>
+      <url>/53734.html</url>
+      
+        <content type="html"><![CDATA[<script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+            <tag> Node.js </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>JavaScript函数</title>
+      <link href="/44428.html"/>
+      <url>/44428.html</url>
+      
+        <content type="html"><![CDATA[<script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>JavaScript异步</title>
+      <link href="/29623.html"/>
+      <url>/29623.html</url>
+      
+        <content type="html"><![CDATA[<script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>JavaScript 基础语法</title>
+      <link href="/44745.html"/>
+      <url>/44745.html</url>
+      
+        <content type="html"><![CDATA[<script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>HTML基础</title>
       <link href="/421.html"/>
       <url>/421.html</url>
@@ -23,7 +160,7 @@
     
     
     <entry>
-      <title>Git版本控制系统</title>
+      <title>Git</title>
       <link href="/1990.html"/>
       <url>/1990.html</url>
       
@@ -95,6 +232,12 @@
         <content type="html"><![CDATA[<h2 id="matery主题魔改记录"><a href="#matery主题魔改记录" class="headerlink" title="matery主题魔改记录"></a>matery主题魔改记录</h2><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>第一次学着搭博客，起初毫无头绪也没有源码基础，跟着B站上的视频部署了hexo环境，安装了hexo默认主题，打开自己做好的博客的那一刻的成就感也确实成为了现在我想了解前端的动力之一，后面阴差阳错的接触到了matery这款主题，这款主题相对复杂一些，魔改过程也比我想的要困难很多（因为丝毫不懂CSS，JS等前端语言），所有的一切都只能百度谷歌。下面记录一下主要的魔改过程吧。</p><h3 id="一：一些特效插件"><a href="#一：一些特效插件" class="headerlink" title="一：一些特效插件"></a>一：一些特效插件</h3><p>我安装的一些主题特效插件都是跟着网上教程弄的，记录一些我觉得比较好的插件</p><ol><li>背景动态线条:可以自定义线条数量颜色以及透明度，填充背景使其视觉效果更饱满</li><li>鼠标跟随星星和点击界面显示爱心和文字</li><li>其他的个人觉得在移动端上显示有点遮挡内容</li></ol><h3 id="二：medias个性化"><a href="#二：medias个性化" class="headerlink" title="二：medias个性化"></a>二：medias个性化</h3><p>medias文件夹里面是个人头像，网站主页，文章主页等博客图片的资源文件，可以随意替换，个人推荐很好的壁纸网站<a href="https://wallhaven.cc/" target="_blank" rel="noopener">wallhaven</a>，国内访问可能有点慢</p><ol><li>下载图片后，直接替换medias里的文件夹里的图片就好，注意图片名称改为与原始图片相同,若图片较大，可适当不失真压缩</li><li>网站logo采用png格式，故可以使用ps自己制作透明logo 同时也有个制作logo的网站<a href="http://www.uugai.com/" target="_blank" rel="noopener">U钙网</a>。</li><li>音乐配置方面，可以直接修改配置文件里的musics，添加音乐平台和歌单地址就好（只能在线播放），还可以下载音乐文件到<code>matery\source\medias\music</code>,还需自己找歌曲图片，最后配置<code>musics.json</code>文件。</li></ol><h3 id="三：加快网页加载速度"><a href="#三：加快网页加载速度" class="headerlink" title="三：加快网页加载速度"></a>三：加快网页加载速度</h3><ol><li>jsd的CDN加速，js，css文件都使用CDN加载</li><li>博客图片采用图床，就是云端托管图片，再用jsd引用，本质也是jsd加速</li><li>图片懒加载，安装相应插件，可自定义loading…加载图</li><li>网页部署到coding或gitee，coding服务器也在海外，效果不太明显，gitee不能自定义域名，速度很快，另外也可采用阿里云和腾讯云的网页托管服务</li></ol><h3 id="四：字体颜色大小和界面颜色"><a href="#四：字体颜色大小和界面颜色" class="headerlink" title="四：字体颜色大小和界面颜色"></a>四：字体颜色大小和界面颜色</h3><ol><li><code>matery.css</code>文件中可随意修改相关颜色，包括nav的渐变色,font,background的颜色</li></ol><h3 id="五：完善博客常访问的网站"><a href="#五：完善博客常访问的网站" class="headerlink" title="五：完善博客常访问的网站"></a>五：完善博客常访问的网站</h3><ol><li><a href="www.wallhaven.cc">wallhaven</a></li></ol><p>图片分辨率很高，很适合做banner图，主要的壁纸都可从该网站上找</p><ol start="2"><li>图标库 [fontawesome] [icomoon] [iconfont]</li></ol><ol start="3"><li>CSDN 博客园等交流社区</li><li></li></ol><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
       
       
+      
+        <tags>
+            
+            <tag> 博客 </tag>
+            
+        </tags>
       
     </entry>
     
