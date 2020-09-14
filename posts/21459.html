@@ -31,8 +31,7 @@
 
     <script src="https://cdn.jsdelivr.net/gh/laityy/CDN/source/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="~Wangs" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-base16-ateliersulphurpool.light.css" type="text/css"></head>
+<meta name="generator" content="Hexo 4.2.0"></head>
 
 
 <body>
@@ -522,14 +521,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.8k
+                    1.9k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    8 分
                 </div>
                 
 
@@ -552,44 +551,44 @@
 <li>事件处理程序：给事件源绑定事件类型后，触发该事件类型后所需要完成的工作，即对事件作出的响应，通常为一个JS函数赋值的方法</li>
 </ol>
 <p>例：</p>
-<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>btn<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>点击<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script language-javascript">
-<span class="token comment" spellcheck="true">// 获取button事件源</span>
- <span class="token keyword">var</span> btn <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'btn'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">//  为button绑定点击事件</span>
- btn<span class="token punctuation">.</span>onclick<span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">// function就是事件处理函数，需要完成的工作都放在function内</span>
-     <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'弹出了一个对话框'</span><span class="token punctuation">)</span>
- <span class="token punctuation">}</span>
-</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre>
+<pre><code class="html">&lt;html&gt;
+&lt;head&gt; 
+&lt;meta charset="utf-8"&gt; 
+&lt;/head&gt;
+&lt;body&gt;
+&lt;button id="btn"&gt;点击&lt;/button&gt;
+&lt;script&gt;
+// 获取button事件源
+ var btn = document.getElementById('btn');
+//  为button绑定点击事件
+ btn.onclick= function(){
+    // function就是事件处理函数，需要完成的工作都放在function内
+     alert('弹出了一个对话框')
+ }
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
 <h3 id="1-获取事件源"><a href="#1-获取事件源" class="headerlink" title="1.获取事件源"></a>1.获取事件源</h3><h4 id="1-1-getElementById"><a href="#1-1-getElementById" class="headerlink" title="1.1 getElementById():"></a>1.1 <code>getElementById()</code>:</h4><p>该方法用于通过id从dom中获取元素，类似的还有：<code>getElementsByTagName()</code>  <code>getElementsByName()</code>  <code>getElementsByClassName()</code>需要注意的是id是唯一的，但标签名和类名不是唯一的，所以通过标签名获取可以获得多个具有相同类名的元素，<code>getElementsByTagName()</code> <code>getElementsByClassName()</code>方法返回 <code>HTMLCollection</code> 对象,需要与<code>getElementsByName()</code>返回的<code>NodeList</code>相区分</p>
-<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">'</span>p<span class="token punctuation">'</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">'</span>demo<span class="token punctuation">'</span></span><span class="token punctuation">></span></span>Hello World!1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">'</span>p<span class="token punctuation">'</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">'</span>demo<span class="token punctuation">'</span></span><span class="token punctuation">></span></span>Hello World!2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">'</span>p<span class="token punctuation">'</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">'</span>demo<span class="token punctuation">'</span></span><span class="token punctuation">></span></span>Hello World!3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script language-javascript">
-<span class="token keyword">var</span> Collection1 <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementsByTagName</span><span class="token punctuation">(</span><span class="token string">"p"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">var</span> Collection2 <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementsByClassName</span><span class="token punctuation">(</span><span class="token string">"p"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">var</span> Collection3 <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementsByName</span><span class="token punctuation">(</span><span class="token string">'demo'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">var</span> Collection4 <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token string">'.p'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Collection1<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//HTMLCollection(3) [p.p, p.p, p.p, demo: p.p]</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Collection2<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//HTMLCollection(3) [p.p, p.p, p.p, demo: p.p]</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Collection3<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//NodeList(3) [p.p, p.p, p.p]</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Collection4<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//NodeList(3) [p.p, p.p, p.p]</span>
-</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre>
+<pre><code class="html">&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;p class='p' name='demo'&gt;Hello World!1&lt;/p&gt;
+&lt;p class='p' name='demo'&gt;Hello World!2&lt;/p&gt;
+&lt;p class='p' name='demo'&gt;Hello World!3&lt;/p&gt;
+&lt;script&gt;
+var Collection1 = document.getElementsByTagName("p");
+var Collection2 = document.getElementsByClassName("p");
+var Collection3 = document.getElementsByName('demo');
+var Collection4 = document.querySelectorAll('.p');
+console.log(Collection1) //HTMLCollection(3) [p.p, p.p, p.p, demo: p.p]
+console.log(Collection2) //HTMLCollection(3) [p.p, p.p, p.p, demo: p.p]
+console.log(Collection3) //NodeList(3) [p.p, p.p, p.p]
+console.log(Collection4) //NodeList(3) [p.p, p.p, p.p]
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
 <h4 id="2-1-querySelector"><a href="#2-1-querySelector" class="headerlink" title="2.1 querySelector():"></a>2.1 <code>querySelector()</code>:</h4><p>querySelector() 方法返回文档中匹配指定 CSS 选择器的一个元素，若返回多个元素使用使用<code>querySelectorAll()</code>，返回 NodeList 对象。</p>
 <h4 id="2-2-NodeList和HTMLCollection区别"><a href="#2-2-NodeList和HTMLCollection区别" class="headerlink" title="2.2 NodeList和HTMLCollection区别"></a>2.2 NodeList和HTMLCollection区别</h4><p>HTMLCollection是HTML元素的集合，<br>NodeList是一个文档节点的集合。</p>
 <p>相同点：</p>
@@ -601,168 +600,168 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <li>HTMLCollection元素可以通过name，id或索引来获取。 NodeList只能通过索引来获取</li>
 <li>NodeList是静态集合，HTMLCollection是一个动态集合。其中动态集合和静态集合的最大区别在于：动态集合指的就是元素集合会随着DOM树元素的增加而增加，减少而减少；静态集合则不会受DOM树元素变化的影响。</li>
 </ol>
-<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>Hello World!<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>DOM 是非常有用的!<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script language-javascript">
-    x<span class="token operator">=</span>document<span class="token punctuation">.</span><span class="token function">getElementsByTagName</span><span class="token punctuation">(</span><span class="token string">"p"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">// 注意该代码要写在创建元素前面才体现出二者区别</span>
-    <span class="token keyword">var</span> p1 <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'p'</span><span class="token punctuation">)</span>
-    <span class="token keyword">var</span> div <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'div'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    p1<span class="token punctuation">.</span>innerHTML<span class="token operator">=</span><span class="token string">'p1'</span>
-    div<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>p1<span class="token punctuation">)</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>x<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">// 返回3 若使用querySelectorAll返回2  </span>
-</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre>
+<pre><code class="html">&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div&gt;
+    &lt;p&gt;Hello World!&lt;/p&gt;
+    &lt;p&gt;DOM 是非常有用的!&lt;/p&gt;
+&lt;/div&gt;
+&lt;script&gt;
+    x=document.getElementsByTagName("p");  // 注意该代码要写在创建元素前面才体现出二者区别
+    var p1 = document.createElement('p')
+    var div = document.querySelector('div');
+    p1.innerHTML='p1'
+    div.appendChild(p1)
+    console.log(x);
+    console.log(x.length);  // 返回3 若使用querySelectorAll返回2  
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
 <h3 id="2-常见事件类型"><a href="#2-常见事件类型" class="headerlink" title="2.常见事件类型"></a>2.常见事件类型</h3><h4 id="2-1-鼠标事件"><a href="#2-1-鼠标事件" class="headerlink" title="2.1 鼠标事件"></a>2.1 鼠标事件</h4><ol>
 <li><p><code>onclick</code>: 鼠标左键点击触发</p>
 </li>
 <li><p><code>onmouseover</code>,<code>onmouseout</code>: 鼠标经过/离开(指定DOM元素)触发</p>
 </li>
 </ol>
-<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">'</span>demo<span class="token punctuation">'</span></span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value"><span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">200</span>px<span class="token punctuation">;</span><span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">200</span>px<span class="token punctuation">;</span> <span class="token property">background-color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script language-javascript">
-<span class="token keyword">var</span> demo <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"#demo"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-demo<span class="token punctuation">.</span>onmouseover<span class="token operator">=</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token keyword">this</span><span class="token punctuation">.</span>style<span class="token punctuation">.</span>backgroundColor<span class="token operator">=</span><span class="token string">'blue'</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-demo<span class="token punctuation">.</span>onmouseout<span class="token operator">=</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token keyword">this</span><span class="token punctuation">.</span>style<span class="token punctuation">.</span>backgroundColor<span class="token operator">=</span><span class="token string">'red'</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre>
+<pre><code class="html">&lt;html&gt;
+&lt;head&gt; 
+&lt;meta charset="utf-8"&gt; 
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id='demo' style="width: 200px;height: 200px; background-color: red;"&gt;&lt;/div&gt;
+&lt;script&gt;
+var demo = document.querySelector("#demo");
+demo.onmouseover=function(){
+    this.style.backgroundColor='blue';
+}
+demo.onmouseout=function(){
+    this.style.backgroundColor='red';
+}
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
 <ol start="3">
 <li><code>onmouseup</code>,<code>onmousedown</code>: 鼠标弹起/按下(指定DOM元素)触发</li>
 </ol>
-<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">'</span>demo<span class="token punctuation">'</span></span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value"><span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">200</span>px<span class="token punctuation">;</span><span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">200</span>px<span class="token punctuation">;</span> <span class="token property">background-color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script language-javascript">
-<span class="token keyword">var</span> demo <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"#demo"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">// demo被点击时，触发 onmousedown 事件</span>
-demo<span class="token punctuation">.</span>onmousedown<span class="token operator">=</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token keyword">this</span><span class="token punctuation">.</span>style<span class="token punctuation">.</span>backgroundColor<span class="token operator">=</span><span class="token string">'blue'</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token comment" spellcheck="true">// 当鼠标按钮被松开时，会触发 onmouseup 事件</span>
-demo<span class="token punctuation">.</span>onmouseup<span class="token operator">=</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token keyword">this</span><span class="token punctuation">.</span>style<span class="token punctuation">.</span>backgroundColor<span class="token operator">=</span><span class="token string">'pink'</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token comment" spellcheck="true">// 最后，当鼠标点击完成时，触发 onclick 事件</span>
-demo<span class="token punctuation">.</span>onclick<span class="token operator">=</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token keyword">this</span><span class="token punctuation">.</span>style<span class="token punctuation">,</span>backgroundColor<span class="token operator">=</span><span class="token string">'black'</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre>
+<pre><code class="html">&lt;html&gt;
+&lt;head&gt; 
+&lt;meta charset="utf-8"&gt; 
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id='demo' style="width: 200px;height: 200px; background-color: red;"&gt;&lt;/div&gt;
+&lt;script&gt;
+var demo = document.querySelector("#demo");
+// demo被点击时，触发 onmousedown 事件
+demo.onmousedown=function(){
+    this.style.backgroundColor='blue';
+}
+// 当鼠标按钮被松开时，会触发 onmouseup 事件
+demo.onmouseup=function(){
+    this.style.backgroundColor='pink';
+}
+// 最后，当鼠标点击完成时，触发 onclick 事件
+demo.onclick=function(){
+    this.style,backgroundColor='black';
+}
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
 <ol>
 <li><code>onmousemove</code>: 鼠标在DOM元素中移动时就触发</li>
 </ol>
-<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">'</span>demo<span class="token punctuation">'</span></span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value"><span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">200</span>px<span class="token punctuation">;</span><span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">200</span>px<span class="token punctuation">;</span> <span class="token property">background-color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script language-javascript">
-<span class="token keyword">var</span> demo <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"#demo"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">// 鼠标在div内移动时会不断触发事件打印输出 ‘鼠标移动了’</span>
- demo<span class="token punctuation">.</span>onmousemove<span class="token operator">=</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-     console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'鼠标移动了'</span><span class="token punctuation">)</span>
- <span class="token punctuation">}</span>
-</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre>
+<pre><code class="html">&lt;html&gt;
+&lt;head&gt; 
+&lt;meta charset="utf-8"&gt; 
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id='demo' style="width: 200px;height: 200px; background-color: red;"&gt;&lt;/div&gt;
+&lt;script&gt;
+var demo = document.querySelector("#demo");
+// 鼠标在div内移动时会不断触发事件打印输出 ‘鼠标移动了’
+ demo.onmousemove=function(){
+     console.log('鼠标移动了')
+ }
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
 <ol start="5">
 <li><code>onfocus</code>,<code>onblur</code>: 目标表单得到/失去焦点时触发</li>
 </ol>
-<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script language-javascript">
-<span class="token keyword">function</span> <span class="token function">Function1</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    x<span class="token punctuation">.</span>style<span class="token punctuation">.</span>background<span class="token operator">=</span><span class="token string">"yellow"</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token keyword">function</span> <span class="token function">Function2</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    x<span class="token punctuation">.</span>style<span class="token punctuation">.</span>backgroundColor<span class="token operator">=</span><span class="token string">""</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
-<span class="token comment" spellcheck="true">&lt;!-- 当输入框获取焦点时，修改背景色（background-color属性）为yellow，当输入框失去焦点时触发Function2，将背景色去掉 --></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">onfocus</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Function1(this)<span class="token punctuation">"</span></span> <span class="token attr-name">onblur</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Function2(this)<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre>
+<pre><code class="html">&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;/head&gt;
+&lt;head&gt;
+&lt;script&gt;
+function Function1(x){
+    x.style.background="yellow";
+}
+function Function2(x){
+    x.style.backgroundColor="";
+    }
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;!-- 当输入框获取焦点时，修改背景色（background-color属性）为yellow，当输入框失去焦点时触发Function2，将背景色去掉 --&gt;
+&lt;input type="text" onfocus="Function1(this)" onblur="Function2(this)"&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
 <h4 id="2-2-键盘事件"><a href="#2-2-键盘事件" class="headerlink" title="2.2 键盘事件"></a>2.2 键盘事件</h4><ol>
 <li><code>onkeydown</code>: 某个键盘按键被按下</li>
 </ol>
-<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script language-javascript">
-<span class="token keyword">function</span> <span class="token function">myFunction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"你在输入栏内按下一个键"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
-<span class="token comment" spellcheck="true">&lt;!-- 在输入框内按下一个按键是函数被触发，先弹出警示框，后写入字符--></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">onkeydown</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>myFunction()<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre>
+<pre><code class="html">&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;script&gt;
+function myFunction(){
+    alert("你在输入栏内按下一个键");
+}
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;!-- 在输入框内按下一个按键是函数被触发，先弹出警示框，后写入字符--&gt;
+&lt;input type="text" onkeydown="myFunction()"&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
 <ol start="2">
 <li><code>onkeypress</code>: 某个键盘按键被按下并松开，类似onclick</li>
 </ol>
 <p>在所有浏览器中 onkeypress 事件不是适用于所有按键(如： ALT, CTRL, SHIFT, ESC)。监听用户是否按下按键应使用 <code>onkeydown</code> 事件,所有浏览器都支持 <code>onkeydown</code> 事件。<br>onkeypress相对使用较少，功能与onkeydown类似</p>
-<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script language-javascript">
-<span class="token keyword">function</span> <span class="token function">myFunction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"你在输入框内按下一个按键"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
-<span class="token comment" spellcheck="true">&lt;!-- 在输入框内按下一个按键时函数被触发 --></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">onkeypress</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>myFunction()<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre>
+<pre><code class="html">&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;script&gt;
+function myFunction(){
+    alert("你在输入框内按下一个按键");
+}
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;!-- 在输入框内按下一个按键时函数被触发 --&gt;
+&lt;input type="text" onkeypress="myFunction()"&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
 <ol start="3">
 <li><code>onkeyup</code>: 某个键盘按键被松开</li>
 </ol>
-<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script language-javascript">
-<span class="token keyword">function</span> <span class="token function">myFunction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token keyword">var</span> x<span class="token operator">=</span>document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"fname"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    x<span class="token punctuation">.</span>value<span class="token operator">=</span>x<span class="token punctuation">.</span>value<span class="token punctuation">.</span><span class="token function">toUpperCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
-<span class="token comment" spellcheck="true">&lt;!-- 在输入字段释放一个按键时触发函数。函数将字符转换为大写 --></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fname<span class="token punctuation">"</span></span> <span class="token attr-name">onkeyup</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>myFunction()<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre>
+<pre><code class="html">&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;script&gt;
+function myFunction(){
+    var x=document.getElementById("fname");
+    x.value=x.value.toUpperCase();
+}
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;!-- 在输入字段释放一个按键时触发函数。函数将字符转换为大写 --&gt;
+&lt;input type="text" id="fname" onkeyup="myFunction()"&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
 <h3 id="3-事件处理程序"><a href="#3-事件处理程序" class="headerlink" title="3.事件处理程序"></a>3.事件处理程序</h3><h4 id="3-1-事件处理程序介绍"><a href="#3-1-事件处理程序介绍" class="headerlink" title="3.1 事件处理程序介绍"></a>3.1 事件处理程序介绍</h4><p>当特定的操作发生时，就会发生事件。把事件处理程序关联到事件发生时要处理的代码上，就提供了在事件发生时捕获事件并执行相应代码的方式。就像设置闹钟，当某个事件发生时，触动事件处理程序。</p>
 <h4 id="3-2-添加事件方式"><a href="#3-2-添加事件方式" class="headerlink" title="3.2 添加事件方式"></a>3.2 添加事件方式</h4><ol>
 <li><p><code>on</code>+事件类型</p>
@@ -1572,8 +1571,8 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <!-- 通过js将运行时间给sitetime -->
             <!-- <span id="sitetime"></span><br> -->
             
-            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">8.2k</span>&nbsp;字
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                    class="white-color">8.5k</span>&nbsp;字
             
             
             
@@ -1748,12 +1747,7 @@ $(function () {
     <script src="https://cdn.jsdelivr.net/gh/laityy/CDN/source/libs/instantpage/instantpage.js" type="module"></script>
     
 
-<script>
-            window.imageLazyLoadSetting = {
-                isSPA: false,
-                processImages: null,
-            };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight+240||document.documentElement.clientHeight+240)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+</body>
 
 </html>
 <!-- <script type="text/javascript">
