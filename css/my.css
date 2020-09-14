@@ -69,18 +69,20 @@ body {
 .diyFont {
     font-family: "方正北魏楷书简体";
 }
-
+/* 修改导航栏字体大小和间距 */
 nav ul a {
     font-size: 1.1rem;
     padding: 0 12px;
 }
+/* logo距离左侧距离 */
 .brand-logo {
     left: 4%;
 }
-
+/* 搜索按钮距离右侧距离 */
 .right {
     margin-right: 3%;
 }
+/* 调整导航栏高度 */
 @media only screen and (min-width: 601px) {
     nav,
     nav .nav-wrapper i,
@@ -91,4 +93,15 @@ nav ul a {
     }
 }
 
-
+/* 文本框内placeholder颜色修改 */
+::-webkit-input-placeholder{
+    color: #777777;
+}
+/* firefox */
+::-moz-placeholder{
+    color: #777777;
+}
+/* ie */
+:-ms-input-placeholder{
+    color: #777777;
+}
