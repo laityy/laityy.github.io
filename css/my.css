@@ -95,13 +95,13 @@ nav ul a {
 
 /* 文本框内placeholder颜色修改 */
 ::-webkit-input-placeholder{
-    color: #777777;
+    color: #555555;
 }
 /* firefox */
 ::-moz-placeholder{
-    color: #777777;
+    color: #555555;
 }
 /* ie */
 :-ms-input-placeholder{
-    color: #777777;
+    color: #555555;
 }
