@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="node.js下, HTML,CSS,JavaScript,JQuery,Node.js,React,Vue.js等">
+    <meta name="keywords" content="JavaScript对象, HTML,CSS,JavaScript,JQuery,Node.js,React,Vue.js等">
     <meta name="description" content="正在成为前端攻城狮的路上，在学习中记录快乐">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- viewport视口标签 -->
@@ -18,7 +18,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>node.js下 | ~Wangs</title>
+    <title>JavaScript对象 | ~Wangs</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/laityy/CDN/source/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/laityy/CDN/source/libs/awesome/css/all.css">
@@ -355,12 +355,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/laityy/CDN/source/medias/featureimages/014.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/laityy/CDN/source/medias/featureimages/021.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">node.js下</h1>
+                    <h1 class="description center-align post-title">JavaScript对象</h1>
                 </div>
             </div>
         </div>
@@ -490,17 +490,9 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/JavaScript/">
-                                <span class="chip bg-color">JavaScript</span>
-                            </a>
-                        
-                            <a href="/tags/Node-js/">
-                                <span class="chip bg-color">Node.js</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -512,28 +504,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-09-12
+                    2020-09-17
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-09-12
+                    2020-09-17
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    52
+                    687
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -548,7 +540,88 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <script>
+                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>JS对象同其他语言一样，都是一种无序的集合数据类型，由若干键值对构成，JS中所有的事物都是对象，包括字符串，数值，数组，函数等。常用于存储信息。</p>
+<p>键值对就是所谓的属性和方法。</p>
+<p><strong>属性</strong>：描述事物的特征，在对象中用属性来表示。通常名词表示，包括字符串，数组，数值，布尔值等。</p>
+<p><strong>方法</strong>：描述事物的方法，在对象中用方法来表示。通常是一个函数。</p>
+<p>声明一个简单的学生对象：</p>
+<pre class=" language-javascript"><code class="language-javascript"> <span class="token keyword">var</span> Student<span class="token operator">=</span> <span class="token punctuation">{</span>
+     name<span class="token punctuation">:</span> <span class="token string">'张三'</span><span class="token punctuation">,</span>
+     age<span class="token punctuation">:</span> <span class="token number">150</span><span class="token punctuation">,</span>
+     sayHi<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Hi'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token punctuation">}</span>
+ <span class="token punctuation">}</span></code></pre>
+<h2 id="1-创建对象"><a href="#1-创建对象" class="headerlink" title="1. 创建对象"></a>1. 创建对象</h2><h3 id="1-1-字面量"><a href="#1-1-字面量" class="headerlink" title="1.1 字面量"></a>1.1 字面量</h3><p>上面的例子就是采用字面量声明的对象，字面量即直接采用对象符号<code>{}</code>声明。直接将描述事物的所有的对象写在<code>{}</code>内，并赋值给被描述的事物</p>
+<h3 id="1-2-new关键字"><a href="#1-2-new关键字" class="headerlink" title="1.2 new关键字"></a>1.2 new关键字</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">// 先声明一个对象</span>
+<span class="token keyword">var</span> Student <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Object</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">// 将属性和方法依次添加给对象</span>
+Student<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">'张三'</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//注意分号</span>
+Student<span class="token punctuation">.</span>age <span class="token operator">=</span> <span class="token number">15</span><span class="token punctuation">;</span>
+Student<span class="token punctuation">.</span>sayHi <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Hi'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<h3 id="1-3-构造函数"><a href="#1-3-构造函数" class="headerlink" title="1.3 构造函数"></a>1.3 构造函数</h3><p>什么是构造函数：</p>
+<p>个人认为的构造函数就是相当于一个对象集合，由于上面的声明的方式若需要创建多个对象，便重复了很多重复赋值的操作，而构造函数的作用就是将相同的代码下写在一个函数中，只需要在创建特定对象的时候将特定的参数传进去即可创建一个单独的对象</p>
+<p>例:</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">// 创建构造函数</span>
+<span class="token keyword">function</span> <span class="token function">Star</span><span class="token punctuation">(</span>uname<span class="token punctuation">,</span> age<span class="token punctuation">,</span> sex<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> uname<span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>sex <span class="token operator">=</span> sex<span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>sing <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>sang<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>sang<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">// 利用new声明对象  传入对应的参数</span>
+<span class="token keyword">var</span> p1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Star</span><span class="token punctuation">(</span><span class="token string">'zs'</span><span class="token punctuation">,</span> <span class="token number">18</span><span class="token punctuation">,</span> <span class="token string">'男'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//方法的参数需要在调用的时候传入</span></code></pre>
+<h2 id="2-访问对象"><a href="#2-访问对象" class="headerlink" title="2. 访问对象"></a>2. 访问对象</h2><h3 id="2-1-访问属性"><a href="#2-1-访问属性" class="headerlink" title="2.1 访问属性"></a>2.1 访问属性</h3><ol>
+<li>通过<code>.</code>调用属性  Object.attribute</li>
+</ol>
+<p>例:</p>
+<pre class=" language-javascript"><code class="language-javascript"> <span class="token keyword">var</span> Student<span class="token operator">=</span> <span class="token punctuation">{</span>
+     name<span class="token punctuation">:</span> <span class="token string">'张三'</span><span class="token punctuation">,</span>
+     age<span class="token punctuation">:</span> <span class="token number">150</span><span class="token punctuation">,</span>
+     sayHi<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Hi'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token punctuation">}</span>
+ <span class="token punctuation">}</span>
+ console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Student<span class="token punctuation">.</span>name<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//张三</span>
+ console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Student<span class="token punctuation">.</span>age<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//150</span></code></pre>
+<ol start="2">
+<li>通过<code>[]</code>调用  Object[‘attribute’]</li>
+</ol>
+<p>该方法适用于当属性名比较复杂时调用</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">var</span> Student <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Object</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+Student<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">'张三'</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//注意分号</span>
+Student<span class="token punctuation">.</span>age <span class="token operator">=</span> <span class="token number">15</span><span class="token punctuation">;</span>
+Student<span class="token punctuation">.</span>sayHi <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Hi'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Student<span class="token punctuation">[</span><span class="token string">'name'</span><span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre>
+<h3 id="2-1-访问方法"><a href="#2-1-访问方法" class="headerlink" title="2.1 访问方法"></a>2.1 访问方法</h3><p>访问方法需要单独调用，调用格式： <code>Object.function()</code></p>
+<p>例：</p>
+<pre class=" language-javascript"><code class="language-javascript"> <span class="token keyword">var</span> Student<span class="token operator">=</span> <span class="token punctuation">{</span>
+     name<span class="token punctuation">:</span> <span class="token string">'张三'</span><span class="token punctuation">,</span>
+     age<span class="token punctuation">:</span> <span class="token number">150</span><span class="token punctuation">,</span>
+     sayHi<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Hi'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token punctuation">}</span>
+ <span class="token punctuation">}</span>
+ Student<span class="token punctuation">.</span><span class="token function">sayHi</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>访问构造函数方法：</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">Star</span><span class="token punctuation">(</span>uname<span class="token punctuation">,</span> age<span class="token punctuation">,</span> sex<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> uname<span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>sex <span class="token operator">=</span> sex<span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>sing <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>sang<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>sang<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+ <span class="token keyword">var</span> p1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Star</span><span class="token punctuation">(</span><span class="token string">'zs'</span><span class="token punctuation">,</span> <span class="token number">18</span><span class="token punctuation">,</span> <span class="token string">'男'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//  需要传参</span>
+ p1<span class="token punctuation">.</span><span class="token function">sing</span><span class="token punctuation">(</span><span class="token string">'xxxx'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//xxxx</span></code></pre>
+<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -591,7 +664,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://tenpages.cn/posts/63439.html">https://tenpages.cn/posts/63439.html</a>
+                    <a href="https://tenpages.cn/posts/undefined.html">https://tenpages.cn/posts/undefined.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -628,15 +701,7 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/JavaScript/">
-                                    <span class="chip bg-color">JavaScript</span>
-                                </a>
-                            
-                                <a href="/tags/Node-js/">
-                                    <span class="chip bg-color">Node.js</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -1071,29 +1136,32 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/21459.html">
+                <a href="/posts/undefined.html">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/laityy/CDN/source/medias/featureimages/000.jpg" class="responsive-img" alt="JavaScript事件">
+                        <img src="https://cdn.jsdelivr.net/gh/laityy/CDN/source/medias/featureimages/021.jpg" class="responsive-img" alt="JavaScript对象">
                         
-                        <span class="card-title">JavaScript事件</span>
+                        <span class="card-title">JavaScript对象</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            前言事件是HTML DOM的核心之一，因而也可称为HTML事件，HTML事件是发生在HTML元素上的事情，在HTML页面中使用JavaScript时，JS可触发这些事件，事件可以是用户行为，也可以是浏览器行为，用户行为指的是用户通过输入设备
+                            前言JS对象同其他语言一样，都是一种无序的集合数据类型，由若干键值对构成，JS中所有的事物都是对象，包括字符串，数值，数组，函数等。常用于存储信息。
+键值对就是所谓的属性和方法。
+属性：描述事物的特征，在对象中用属性来表示。通常名词表示，包
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-09-12
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-17
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -1102,14 +1170,7 @@
                         </span>
                     </div>
                 </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/JavaScript/">
-                        <span class="chip bg-color">JavaScript</span>
-                    </a>
-                    
-                </div>
+
                 
             </div>
         </div>
@@ -1120,13 +1181,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/53734.html">
+                <a href="/posts/509.html">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/laityy/CDN/source/medias/featureimages/013.jpg" class="responsive-img" alt="node.js上">
+                        <img src="https://cdn.jsdelivr.net/gh/laityy/CDN/source/medias/featureimages/002.jpg" class="responsive-img" alt="JavaScript记录">
                         
-                        <span class="card-title">node.js上</span>
+                        <span class="card-title">JavaScript记录</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1155,10 +1216,6 @@
                     
                     <a href="/tags/JavaScript/">
                         <span class="chip bg-color">JavaScript</span>
-                    </a>
-                    
-                    <a href="/tags/Node-js/">
-                        <span class="chip bg-color">Node.js</span>
                     </a>
                     
                 </div>

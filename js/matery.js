@@ -122,7 +122,7 @@ $(function () {
 
     /*回到顶部*/
     $('#backTop').click(function () {
-        $('body,html').animate({ scrollTop: 0 }, 400);
+        $('body,html').animate({ scrollTop: 0 }, 500);
         return false;
     });
 
@@ -151,7 +151,7 @@ $(function () {
 
     $(".nav-menu>li").hover(function () {
         $(this).children('ul').stop(true, true).show();
-        $(this).addClass('nav-show').siblings('li').removeClass('nav-show');
+        $(this).toggleClass('nav-show');
 
     }, function () {
         $(this).children('ul').stop(true, true).hide();
@@ -168,4 +168,8 @@ $(function () {
             $('.m-nav-item.m-nav-show').removeClass('m-nav-show');
         }
     });
+    // 首页跳动按钮添加鼠标悬浮停止
+    $('.cover-btns>a').hover(function () {
+        $(this).stop().toggleClass('scroll-down');
+    })
 });
