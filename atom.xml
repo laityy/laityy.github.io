@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tenpages.cn/"/>
-  <updated>2020-09-17T14:08:13.340Z</updated>
+  <updated>2020-09-17T14:08:45.968Z</updated>
   <id>https://tenpages.cn/</id>
   
   <author>
@@ -17,38 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>sadas</title>
-    <link href="https://tenpages.cn/posts/9d33.html"/>
-    <id>https://tenpages.cn/posts/9d33.html</id>
-    <published>2020-09-17T14:08:13.000Z</published>
-    <updated>2020-09-17T14:08:13.340Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;script&gt;
-        document.querySelectorAll(&#39;.github-emoji&#39;)
-          .forEach(el =&gt; {
-            if (!el.dataset.src) { return; }
-       
-        
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
     <title>JavaScript对象</title>
     <link href="https://tenpages.cn/posts/5457.html"/>
     <id>https://tenpages.cn/posts/5457.html</id>
     <published>2020-09-17T12:39:03.000Z</published>
-    <updated>2020-09-17T13:55:53.593Z</updated>
+    <updated>2020-09-17T14:08:45.968Z</updated>
     
     <summary type="html">
     
@@ -397,29 +370,6 @@
     
     
       <category term="博客" scheme="https://tenpages.cn/tags/%E5%8D%9A%E5%AE%A2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://tenpages.cn/posts/16107.html"/>
-    <id>https://tenpages.cn/posts/16107.html</id>
-    <published>2020-05-11T15:31:54.630Z</published>
-    <updated>2020-06-04T16:20:32.302Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
-        
-      
-    
-    </summary>
-    
-    
     
   </entry>
   
