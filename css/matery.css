@@ -381,7 +381,7 @@ header .side-nav .fa-fw {
     margin-right: -7px;
 }
 
-header .side-nav li>a {
+header .side-nav li > a {
     padding-right: 22px;
 }
 
@@ -604,7 +604,7 @@ header .go-back i {
     font-weight: 300;
     font-size: 1.25rem;
     line-height: 1.4em;
-    color: #a5e7f6;
+    color: #4dc7f6;
 }
 
 .bg-cover .post-title {
@@ -939,7 +939,11 @@ article .article-tags .chip {
 
 .paging i {
     font-size: 2.5rem;
-    background: linear-gradient(to bottom left, rgb(162 255 225 / 71%) 0%,rgb(208 85 255) 100%);
+    background: linear-gradient(
+        to bottom left,
+        rgb(162 255 225 / 71%) 0%,
+        rgb(208 85 255) 100%
+    );
     color: rgb(41 248 255);
     transition: all 0.5s;
 }
@@ -948,7 +952,6 @@ article .article-tags .chip {
 .paging i.fa-angle-left:hover {
     color: rgb(202, 120, 240);
 }
-
 
 .paging .disabled i {
     background: #ccc !important;
