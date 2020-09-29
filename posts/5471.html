@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Git, HTML,CSS,JavaScript,JQuery,Node.js,React,Vue.js等">
+    <meta name="keywords" content="JavaScript原型和原型链, HTML,CSS,JavaScript,JQuery,Node.js,React,Vue.js等">
     <meta name="description" content="正在成为前端攻城狮的路上，在学习中记录快乐">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- viewport视口标签 -->
@@ -18,7 +18,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Git | ~Wangs</title>
+    <title>JavaScript原型和原型链 | ~Wangs</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/laityy/CDN/source/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/laityy/CDN/source/libs/awesome/css/all.css">
@@ -355,12 +355,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/laityy/photo/images/git2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/laityy/CDN/source/medias/featureimages/015.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Git</h1>
+                    <h1 class="description center-align post-title">JavaScript原型和原型链</h1>
                 </div>
             </div>
         </div>
@@ -492,12 +492,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Git/">
-                                <span class="chip bg-color">Git</span>
-                            </a>
-                        
-                            <a href="/tags/%E5%B7%A5%E5%85%B7/">
-                                <span class="chip bg-color">工具</span>
+                            <a href="/tags/JavaScript/">
+                                <span class="chip bg-color">JavaScript</span>
                             </a>
                         
                     </div>
@@ -512,28 +508,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-05-29
+                    2020-09-29
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-09-12
+                    2020-09-29
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    118
+                    1.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    4 分
                 </div>
                 
 
@@ -548,7 +544,45 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><h3 id="Git简介"><a href="#Git简介" class="headerlink" title="Git简介"></a>Git简介</h3><p> git是一个开源式的分布式版本控制系统，与之相对应的集中式版本控制系统主要有CVS(最早，开源)，SVN(使用最多，开源)，VSS(集成在visual studio中)…分布式主要有git，Mercurial，Monotone…</p>
+                <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>原型应该算是JS语法中较为花时间的部分之一了，但是理解之后发现并没有想像的那么难，只是几个对象的层层访问，层层指向，下面记录一下我个人对JS原型的理解</p>
+<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>首先介绍一下需要了解的几个名词</p>
+<p><code>prototype</code>：构造函数原型对象</p>
+<p><code>__proto__</code>：实例对象的原型对象</p>
+<p><code>constructor</code>：构造函数</p>
+<p>上面三者的关系可以概括为：每个构造函数都有一个原型对象（<code>prototype</code>），原型对象（<code>prototype</code>）都包含一个指向构造函数的指针（<code>constructor</code>），而实例都包含一个指向原型对象的内部指针(<code>__proto__</code>)。</p>
+<p><strong>什么是原型</strong>：</p>
+<p>每个JS创建的时候，就会与之关联另一个对象，即包含一个<strong>proto</strong>属性，值为另一个对象在堆中的地址，使之能访问到与<strong>proto</strong>对应的那个对象，实现关联的功能</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//创建一个Person构造函数</span>
+<span class="token keyword">function</span> <span class="token function">Person</span><span class="token punctuation">(</span>age<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">//创建实例对象</span>
+<span class="token keyword">var</span> person1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token number">18</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<h3 id="prototype"><a href="#prototype" class="headerlink" title="prototype"></a><code>prototype</code></h3><p>概念：JS中的每个构造函数(例如Number String等)都会有一个prototype属性，这个属性的值为该函数的原型对象的地址，即prototype属性指向构造函数的原型对象</p>
+<h3 id="proto"><a href="#proto" class="headerlink" title="__proto__"></a><code>__proto__</code></h3><p>概念：JS中的对象（null没有）都包含的一个属性，值存储的也是该对象所对应原型对象的地址，实际上就是该对象的构造函数所指向的原型，即构造函数的<code>prototype</code>和实例对象的<code>__proto__</code>指向的同一个原型。</p>
+<p>使用上面构造函数案例：</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//给构造函数原型添加一个属性</span>
+Person<span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">'李四'</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>person1<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token comment" spellcheck="true">// '李四'</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Person<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token comment" spellcheck="true">// 值不对  Person函数名</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>person1<span class="token punctuation">.</span>__proto__<span class="token punctuation">.</span>name<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//'李四'</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Person<span class="token punctuation">.</span>prototype <span class="token operator">===</span> person1<span class="token punctuation">.</span>__proto__<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//true</span></code></pre>
+<p>上面代码中，person1中并没有name属性，Person构造函数的prototype指向一个对象，这个对象也是使用Person构造函数创建的person1的原型，即<code>Person.prototype === person1.__proto__</code>返回的是true,所以也可以通过<code>person1.__proto__.name</code>访问到name的值。</p>
+<p><strong>那<code>person1.name</code>为什么输出李四呢：</strong></p>
+<p>person1中没有name，所以会向该对象的<code>__proto__</code>属性指向的对象（即原型对象）中查找，有则直接使用，没有则继续向该对象的原型的原型中查找，由此便产生一条类似作用域链的链，称之为原型链。</p>
+<p><strong>注意<code>Person.name</code>输出undefined:</strong></p>
+<p><code>Person.name</code>是无法输出name的，Person是一个构造函数，函数好像（目前我还不清楚）不能直接访问他的原型，必须要手动添加<code>prototype</code>后才能访问里面的属性</p>
+<h3 id="constructor-NaN"><a href="#constructor-NaN" class="headerlink" title="constructor"></a><code>constructor</code></h3><p>概念：<code>constructor</code>是每个对象也会有的一个属性，指向的是创建该对象使用的或者说该对象所指向的构造函数。</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">// person1由Person构造函数实例化</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>person1<span class="token punctuation">.</span>constructor<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//[Function: Person]</span>
+<span class="token comment" spellcheck="true">//Person的原型对象关联的构造函数就是Person</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Person<span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>constructor<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// [Function: Person]</span></code></pre>
+<h3 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h3><p><strong>原型链概念</strong>：<br>在任意对象和Object.prototype之间，存在着一条以非标准属性<strong>proto</strong>进行连接的链，那我们管这条链叫做原型链。</p>
+<p><strong>个人理解的</strong>：当访问对象的一个属性或方法时，它会先在对象自身中寻找，如果有则直接使用，如果没有则去原型对象寻找，依次类推，可形成查找的一个链条，类似作用域中的作用域链，因而可以在创建构造函数时，将这些共有的属性方法统一放在构造函数的原型对象中，这样可以不用对每个对象单独添加方法，也不会影响全局作用域，就可以使每个对象都有这些属性和方法</p>
+<ol>
+<li>实际上原型链就是上面代码中的<code>person1</code>–&gt;<code>person1.__prototype</code>==<code>Person.__proto__</code>–&gt;<code>Object.prototype</code>.原型链最终都会指向Object.prototype，因为所有对象都是Object构造函数的实例，在默认情况下，一个任意的对象的原型是直接指向Object.prototype，即跳过构造函数那一步</li>
+<li>所有的对象都有原型，<code>Object.prototype</code>是原型链的顶部，也有<code>__proto__</code>属性，但属性值null。</li>
+</ol>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -592,7 +626,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://tenpages.cn/posts/1990.html">https://tenpages.cn/posts/1990.html</a>
+                    <a href="https://tenpages.cn/posts/5471.html">https://tenpages.cn/posts/5471.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -630,12 +664,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Git/">
-                                    <span class="chip bg-color">Git</span>
-                                </a>
-                            
-                                <a href="/tags/%E5%B7%A5%E5%85%B7/">
-                                    <span class="chip bg-color">工具</span>
+                                <a href="/tags/JavaScript/">
+                                    <span class="chip bg-color">JavaScript</span>
                                 </a>
                             
                         </div>
@@ -1072,29 +1102,33 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/421.html">
+                <a href="/posts/5471.html">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/laityy/photo/images/landscape2.jpg" class="responsive-img" alt="HTML基础">
                         
-                        <span class="card-title">HTML基础</span>
+                        <img src="https://cdn.jsdelivr.net/gh/laityy/CDN/source/medias/featureimages/015.jpg" class="responsive-img" alt="JavaScript原型和原型链">
+                        
+                        <span class="card-title">JavaScript原型和原型链</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            前言html是前端入门基础之一，同时也是web标准中最重要的一部分，在学习后面内容之前必须要掌握好这一门语言。下面主要记录一些html5中常用标签及语法；
-下面标签以结构和功能进行区分，结构指划分区域的标签，往往不能直接表现出的，功能是指在
+                            前言原型应该算是JS语法中较为花时间的部分之一了，但是理解之后发现并没有想像的那么难，只是几个对象的层层访问，层层指向，下面记录一下我个人对JS原型的理解
+介绍首先介绍一下需要了解的几个名词
+prototype：构造函数原型对象
+__pro
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-03
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-29
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -1103,11 +1137,12 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/html/">
-                        <span class="chip bg-color">html</span>
+                    <a href="/tags/JavaScript/">
+                        <span class="chip bg-color">JavaScript</span>
                     </a>
                     
                 </div>
@@ -1121,40 +1156,26 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/64490.html">
+                <a href="/posts/5457.html">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/laityy/CDN/source/medias/featureimages/004.jpg" class="responsive-img" alt="实用工具">
+                        <img src="https://cdn.jsdelivr.net/gh/laityy/CDN/source/medias/featureimages/021.jpg" class="responsive-img" alt="JavaScript对象">
                         
-                        <span class="card-title">实用工具</span>
+                        <span class="card-title">JavaScript对象</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            主要介绍一些学习中可能使用的实用工具文档转换
-轻松玩转pdf
-
-
-pdf文档的转换和编辑加密等
-
-
-CleverPDF
-
-
-27个强大的PDF在线工具，完全免费！
-
-
-ProcessOn
-
-
-免费支持在线作图，实时协作。支持流程图，思维导图
+                            前言JS对象同其他语言一样，都是一种无序的集合数据类型，由若干键值对构成，JS中所有的事物都是对象，包括字符串，数值，数组，函数等。常用于存储信息。
+键值对就是所谓的属性和方法。
+属性：描述事物的特征，在对象中用属性来表示。通常名词表示，包
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-14
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-17
                             </span>
                         <span class="publish-author">
                             
@@ -1167,8 +1188,8 @@ ProcessOn
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%B7%A5%E5%85%B7/">
-                        <span class="chip bg-color">工具</span>
+                    <a href="/tags/JavaScript/">
+                        <span class="chip bg-color">JavaScript</span>
                     </a>
                     
                 </div>

@@ -515,14 +515,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-09-25
+                    2020-09-26
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    773
+                    809
                 </div>
                 
 
@@ -565,8 +565,8 @@ Student<span class="token punctuation">.</span>age <span class="token operator">
 Student<span class="token punctuation">.</span>sayHi <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Hi'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
-<p>实际上new就是用来创建构造函数的实例，上面的Object和下文中的Star都是一个构造函数，Object是ES内置的构造函数，Star是自定义的构造函数</p>
-<p>所有对象都有构造函数，可通过constructor属性访问到，可直接通过对象的constructor属性访问到</p>
+<p>实际上new就是用来创建构造函数的实例，上面的Object和下文中的Star都是一个构造函数，Object是ES内置的构造函数，Star是自定义的构造函数，构造函数后面跟括号调用该函数，返回的就是一个对象，就是该构造函数的实例对象，对象中包含属性合方法</p>
+<p>所有对象都有构造函数，可直接通过对象的constructor属性访问到</p>
 <h3 id="1-3-构造函数"><a href="#1-3-构造函数" class="headerlink" title="1.3 构造函数"></a>1.3 构造函数</h3><p>什么是构造函数：</p>
 <p>个人认为的构造函数就是相当于一个对象集合，由于上面的声明的方式若需要创建多个对象，便重复了很多重复赋值的操作，而构造函数的作用就是将相同的代码下写在一个函数中，只需要在创建特定对象的时候将特定的参数传进去即可创建一个单独的对象</p>
 <p>例:</p>
@@ -1146,32 +1146,32 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/5457.html">
+                <a href="/posts/5471.html">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/laityy/CDN/source/medias/featureimages/021.jpg" class="responsive-img" alt="JavaScript对象">
+                        <img src="https://cdn.jsdelivr.net/gh/laityy/CDN/source/medias/featureimages/015.jpg" class="responsive-img" alt="JavaScript原型和原型链">
                         
-                        <span class="card-title">JavaScript对象</span>
+                        <span class="card-title">JavaScript原型和原型链</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            前言JS对象同其他语言一样，都是一种无序的集合数据类型，由若干键值对构成，JS中所有的事物都是对象，包括字符串，数值，数组，函数等。常用于存储信息。
-键值对就是所谓的属性和方法。
-属性：描述事物的特征，在对象中用属性来表示。通常名词表示，包
+                            前言原型应该算是JS语法中较为花时间的部分之一了，但是理解之后发现并没有想像的那么难，只是几个对象的层层访问，层层指向，下面记录一下我个人对JS原型的理解
+介绍首先介绍一下需要了解的几个名词
+prototype：构造函数原型对象
+__pro
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-17
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-09-29
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -1180,7 +1180,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -1427,7 +1426,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <!-- <span id="sitetime"></span><br> -->
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                    class="white-color">9.6k</span>&nbsp;字
+                    class="white-color">10.8k</span>&nbsp;字
             
             
             
