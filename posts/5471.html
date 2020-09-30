@@ -580,8 +580,10 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <h3 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h3><p><strong>原型链概念</strong>：<br>在任意对象和Object.prototype之间，存在着一条以非标准属性<strong>proto</strong>进行连接的链，那我们管这条链叫做原型链。</p>
 <p><strong>个人理解的</strong>：当访问对象的一个属性或方法时，它会先在对象自身中寻找，如果有则直接使用，如果没有则去原型对象寻找，依次类推，可形成查找的一个链条，类似作用域中的作用域链，因而可以在创建构造函数时，将这些共有的属性方法统一放在构造函数的原型对象中，这样可以不用对每个对象单独添加方法，也不会影响全局作用域，就可以使每个对象都有这些属性和方法</p>
 <ol>
-<li>实际上原型链就是上面代码中的<code>person1</code> -&gt; <code>person1.__prototype</code> == <code>Person.__proto__</code> -&gt; <code>Object.prototype</code>.原型链最终都会指向Object.prototype，因为所有对象都是Object构造函数的实例，在默认情况下，一个任意的对象的原型是直接指向Object.prototype，即跳过构造函数那一步</li>
-<li>所有的对象都有原型，<code>Object.prototype</code>是原型链的顶部，也有<code>__proto__</code>属性，但属性值null。</li>
+<li><p>实际上原型链就是上面代码中的<code>person1</code> -&gt; <code>person1.__prototype</code> == <code>Person.__proto__</code> -&gt; <code>Object.prototype</code>.原型链最终都会指向Object.prototype，因为所有对象都是Object构造函数的实例，在默认情况下，一个任意的对象的原型是直接指向Object.prototype，即跳过构造函数那一步</p>
+</li>
+<li><p>所有的对象都有原型，<code>Object.prototype</code>是原型链的顶部，也有<code>__proto__</code>属性，但属性值null。</p>
+</li>
 </ol>
 <script>
         document.querySelectorAll('.github-emoji')
