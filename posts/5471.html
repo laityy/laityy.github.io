@@ -522,7 +522,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.3k
+                    1.2k
                 </div>
                 
 
@@ -552,21 +552,31 @@
 <p>上面三者的关系可以概括为：每个构造函数都有一个原型对象（<code>prototype</code>），原型对象（<code>prototype</code>）都包含一个指向构造函数的指针（<code>constructor</code>），而实例都包含一个指向原型对象的内部指针(<code>__proto__</code>)。</p>
 <p><strong>什么是原型</strong>：</p>
 <p>每个JS创建的时候，就会与之关联另一个对象，即包含一个<strong>proto</strong>属性，值为另一个对象在堆中的地址，使之能访问到与<strong>proto</strong>对应的那个对象，实现关联的功能</p>
-<figure class="highlight javascript"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">//创建一个Person构造函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">age</span>)</span>{</span><br><span class="line">    <span class="keyword">this</span>.age = age;</span><br><span class="line">}</span><br><span class="line"><span class="comment">//创建实例对象</span></span><br><span class="line"><span class="keyword">var</span> person1 = <span class="keyword">new</span> Person(<span class="number">18</span>);</span><br></pre></td></tr></tbody></table></figure>
-
+<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//创建一个Person构造函数</span>
+<span class="token keyword">function</span> <span class="token function">Person</span><span class="token punctuation">(</span>age<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">//创建实例对象</span>
+<span class="token keyword">var</span> person1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token number">18</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <h3 id="prototype"><a href="#prototype" class="headerlink" title="prototype"></a><code>prototype</code></h3><p>概念：JS中的每个构造函数(例如Number String等)都会有一个prototype属性，这个属性的值为该函数的原型对象的地址，即prototype属性指向构造函数的原型对象</p>
 <h3 id="proto"><a href="#proto" class="headerlink" title="__proto__"></a><code>__proto__</code></h3><p>概念：JS中的对象（null没有）都包含的一个属性，值存储的也是该对象所对应原型对象的地址，实际上就是该对象的构造函数所指向的原型，即构造函数的<code>prototype</code>和实例对象的<code>__proto__</code>指向的同一个原型。</p>
 <p>使用上面构造函数案例：</p>
-<figure class="highlight javascript"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">//给构造函数原型添加一个属性</span></span><br><span class="line">Person.prototype.name = <span class="string">'李四'</span>;</span><br><span class="line"><span class="built_in">console</span>.log(person1.name)<span class="comment">// '李四'</span></span><br><span class="line"><span class="built_in">console</span>.log(Person.name)<span class="comment">// 值不对  Person函数名</span></span><br><span class="line"><span class="built_in">console</span>.log(person1.__proto__.name) <span class="comment">//'李四'</span></span><br><span class="line"><span class="built_in">console</span>.log(Person.prototype === person1.__proto__) <span class="comment">//true</span></span><br></pre></td></tr></tbody></table></figure>
-
+<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//给构造函数原型添加一个属性</span>
+Person<span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">'李四'</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>person1<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token comment" spellcheck="true">// '李四'</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Person<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token comment" spellcheck="true">// 值不对  Person函数名</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>person1<span class="token punctuation">.</span>__proto__<span class="token punctuation">.</span>name<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//'李四'</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Person<span class="token punctuation">.</span>prototype <span class="token operator">===</span> person1<span class="token punctuation">.</span>__proto__<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//true</span></code></pre>
 <p>上面代码中，person1中并没有name属性，Person构造函数的prototype指向一个对象，这个对象也是使用Person构造函数创建的person1的原型，即<code>Person.prototype === person1.__proto__</code>返回的是true,所以也可以通过<code>person1.__proto__.name</code>访问到name的值。</p>
 <p><strong>那<code>person1.name</code>为什么输出李四呢：</strong></p>
 <p>person1中没有name，所以会向该对象的<code>__proto__</code>属性指向的对象（即原型对象）中查找，有则直接使用，没有则继续向该对象的原型的原型中查找，由此便产生一条类似作用域链的链，称之为原型链。</p>
 <p><strong>注意<code>Person.name</code>输出undefined:</strong></p>
 <p><code>Person.name</code>是无法输出name的，Person是一个构造函数，函数好像（目前我还不清楚）不能直接访问他的原型，必须要手动添加<code>prototype</code>后才能访问里面的属性</p>
 <h3 id="constructor-NaN"><a href="#constructor-NaN" class="headerlink" title="constructor"></a><code>constructor</code></h3><p>概念：<code>constructor</code>是每个对象也会有的一个属性，指向的是创建该对象使用的或者说该对象所指向的构造函数。</p>
-<figure class="highlight javascript"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// person1由Person构造函数实例化</span></span><br><span class="line"><span class="built_in">console</span>.log(person1.constructor) <span class="comment">//[Function: Person]</span></span><br><span class="line"><span class="comment">//Person的原型对象关联的构造函数就是Person</span></span><br><span class="line"><span class="built_in">console</span>.log(Person.prototype.constructor) <span class="comment">// [Function: Person]</span></span><br></pre></td></tr></tbody></table></figure>
-
+<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">// person1由Person构造函数实例化</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>person1<span class="token punctuation">.</span>constructor<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//[Function: Person]</span>
+<span class="token comment" spellcheck="true">//Person的原型对象关联的构造函数就是Person</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Person<span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>constructor<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// [Function: Person]</span></code></pre>
 <h3 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h3><p><strong>原型链概念</strong>：<br>在任意对象和Object.prototype之间，存在着一条以非标准属性<strong>proto</strong>进行连接的链，那我们管这条链叫做原型链。</p>
 <p><strong>个人理解的</strong>：当访问对象的一个属性或方法时，它会先在对象自身中寻找，如果有则直接使用，如果没有则去原型对象寻找，依次类推，可形成查找的一个链条，类似作用域中的作用域链，因而可以在创建构造函数时，将这些共有的属性方法统一放在构造函数的原型对象中，这样可以不用对每个对象单独添加方法，也不会影响全局作用域，就可以使每个对象都有这些属性和方法</p>
 <ol>
@@ -576,7 +586,7 @@
 </li>
 </ol>
 <p>下图为上面Person构造函数中的原型链：</p>
-<img src="https://cdn.jsdelivr.net/gh/laityy/cdn/source/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/laityy/photo/images/原型链.jpg">
+<img src="https://cdn.jsdelivr.net/gh/laityy/cdn/source/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/laityy/photo/images/原型链.jpg"/>
 
 <p><strong>注意：</strong></p>
 <ol>
@@ -584,25 +594,7 @@
 <li>原型对象也是对象，也有<code>__proto__</code>属性，指向另一个原型.</li>
 <li><code>Object.prototype</code>是原型链顶层，也有<code>__proto__</code>属性，但属性值为<code>null</code>.</li>
 </ol>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>
+
             </div>
             <hr/>
 
@@ -1381,7 +1373,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <!-- <span id="sitetime"></span><br> -->
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                    class="white-color">11.4k</span>&nbsp;字
+                    class="white-color">10.2k</span>&nbsp;字
             
             
             

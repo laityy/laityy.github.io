@@ -75,18 +75,6 @@
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;script&gt;
-        document.querySelectorAll(&#39;.github-emoji&#39;)
-          .forEach(el =&gt; {
-            if (!el.dataset.src) { return; }
-       
-        
-      
-    
     </summary>
     
     
@@ -129,18 +117,6 @@
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;script&gt;
-        document.querySelectorAll(&#39;.github-emoji&#39;)
-          .forEach(el =&gt; {
-            if (!el.dataset.src) { return; }
-       
-        
-      
-    
     </summary>
     
     
@@ -159,18 +135,6 @@
     <updated>2020-10-18T15:20:53.764Z</updated>
     
     <summary type="html">
-    
-      
-      
-        
-        
-          &lt;script&gt;
-        document.querySelectorAll(&#39;.github-emoji&#39;)
-          .forEach(el =&gt; {
-            if (!el.dataset.src) { return; }
-       
-        
-      
     
     </summary>
     
@@ -191,18 +155,6 @@
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;script&gt;
-        document.querySelectorAll(&#39;.github-emoji&#39;)
-          .forEach(el =&gt; {
-            if (!el.dataset.src) { return; }
-       
-        
-      
-    
     </summary>
     
     
@@ -220,18 +172,6 @@
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;script&gt;
-        document.querySelectorAll(&#39;.github-emoji&#39;)
-          .forEach(el =&gt; {
-            if (!el.dataset.src) { return; }
-       
-        
-      
-    
     </summary>
     
     
@@ -248,18 +188,6 @@
     <updated>2020-10-18T15:19:45.923Z</updated>
     
     <summary type="html">
-    
-      
-      
-        
-        
-          &lt;script&gt;
-        document.querySelectorAll(&#39;.github-emoji&#39;)
-          .forEach(el =&gt; {
-            if (!el.dataset.src) { return; }
-       
-        
-      
     
     </summary>
     
